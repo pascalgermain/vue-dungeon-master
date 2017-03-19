@@ -1,28 +1,57 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <character-blocks :characters="characters"></character-blocks>
+    <character-views></character-views>
+    <dungeon></dungeon>
+    <spells></spells>
+    <items></items>
+    <controls></controls>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import CharacterBlocks from './components/CharacterBlocks'
+import CharacterViews from './components/CharacterViews'
+import Dungeon from './components/Dungeon'
+import Spells from './components/Spells'
+import Items from './components/Items'
+import Controls from './components/Controls'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    CharacterBlocks,
+    CharacterViews,
+    Dungeon,
+    Spells,
+    Items,
+    Controls
+  },
+  data () {
+    return {
+      characters: [
+        {id: 2, name: 'Halk', hands: {left: 0, right: 0}, params: {health: 100, stamina: 80, mana: 0}, active: false},
+        {id: 4, name: 'Syra', hands: {left: 0, right: 2}, params: {health: 90, stamina: 70, mana: 80}, active: false},
+        {id: 6, name: 'Hissssa', hands: {left: 0, right: 1}, params: {health: 80, stamina: 60, mana: 70}, active: false},
+        {id: 8, name: 'Elija', hands: {left: 0, right: 3}, params: {health: 70, stamina: 50, mana: 60}, active: true}
+      ]
+    }
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import './theme/_variables.scss';
+
+$width: double(640px);
+$height: double(338px);
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: $width;
+  height: $height;
+  margin: (-$height / 2) 0 0 (-$width / 2);
 }
 </style>

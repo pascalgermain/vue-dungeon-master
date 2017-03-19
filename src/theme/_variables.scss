@@ -1,0 +1,27 @@
+@function double ($number) {
+  @return $number * 2
+}
+
+$color-black: #000;
+
+$color-grey-dark:  #434542;
+$color-grey:       #636563;
+$color-grey-light: #acaaad;
+
+$color-red: #ea3323;
+
+$color-orange: #f3ad3d;
+
+$color-yellow: #fffe54;
+
+$color-green: #5ecb3c;
+
+$color-blue:       #001df5;
+$color-blue-light: #5dcccd;
+
+$color-white: #fff;
+
+$color-character-1: $color-green;
+$color-character-2: $color-yellow;
+$color-character-3: $color-red;
+$color-character-4: $color-blue;
