@@ -2,10 +2,16 @@
   <div id="app">
     <character-blocks :characters="characters"></character-blocks>
     <character-views></character-views>
-    <dungeon></dungeon>
+    <dungeon
+      :position="position"
+      :rotation="rotation"
+    ></dungeon>
     <spells></spells>
     <items></items>
-    <controls></controls>
+    <controls
+      @position="move($event)"
+      @rotation="rotate($event)"
+    ></controls>
   </div>
 </template>
 
@@ -34,7 +40,17 @@ export default {
         {id: 4, name: 'Syra', hands: {left: 0, right: 2}, params: {health: 90, stamina: 70, mana: 80}, active: false},
         {id: 6, name: 'Hissssa', hands: {left: 0, right: 1}, params: {health: 80, stamina: 60, mana: 70}, active: false},
         {id: 8, name: 'Elija', hands: {left: 0, right: 3}, params: {health: 70, stamina: 50, mana: 60}, active: true}
-      ]
+      ],
+      position: {x: 5, y: 5},
+      rotation: 0
+    }
+  },
+  methods: {
+    move (position) {
+      this.position = position
+    },
+    rotate (rotation) {
+      this.rotation = rotation
     }
   }
 }

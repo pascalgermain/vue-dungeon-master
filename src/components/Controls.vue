@@ -5,6 +5,8 @@
       :key="key"
       :type="control.type"
       :direction="control.direction"
+      @move="move($event)"
+      @turn="turn($event)"
     ></control>
   </div>
 </template>
@@ -19,14 +21,39 @@ export default {
   },
   data () {
     return {
+      position: {x: 5, y: 5},
+      directions: [
+        {name: 'north', move: {x: 0, y: -1}, rotate: 0},
+        {name: 'east', move: {x: 1, y: 0}, rotate: 90},
+        {name: 'south', move: {x: 0, y: 1}, rotate: 180},
+        {name: 'west', move: {x: -1, y: 0}, rotate: 270}
+      ],
       controls: [
-        {type: 'turn', direction: 'left'},
-        {type: 'move', direction: 'up'},
-        {type: 'turn', direction: 'right'},
-        {type: 'move', direction: 'left'},
-        {type: 'move', direction: 'down'},
-        {type: 'move', direction: 'right'}
+        {type: 'turn', direction: {name: 'left', value: -1}},
+        {type: 'move', direction: {name: 'up', value: 0}},
+        {type: 'turn', direction: {name: 'right', value: 1}},
+        {type: 'move', direction: {name: 'left', value: 3}},
+        {type: 'move', direction: {name: 'down', value: 2}},
+        {type: 'move', direction: {name: 'right', value: 1}}
       ]
+    }
+  },
+  methods: {
+    move (direction) {
+      this.position.x += this.directions[direction.value].move.x
+      this.position.y += this.directions[direction.value].move.y
+      this.$emit('position', this.position)
+    },
+    turn (direction) {
+      switch (direction.value) {
+        case -1:
+          this.directions.unshift(this.directions.pop())
+          break
+        case 1:
+          this.directions.push(this.directions.shift())
+          break
+      }
+      this.$emit('rotation', this.directions[0].rotate)
     }
   }
 }

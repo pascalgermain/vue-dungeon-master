@@ -4,7 +4,7 @@
       :style="{backgroundImage: `url(${backgroundImage})`}"
       @mousedown="active = true"
       @mouseup="active = false"
-      @click="action"
+      @click="click"
     ></div>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
       required: true
     },
     direction: {
-      type: String,
+      type: Object,
       required: true
     }
   },
@@ -31,12 +31,12 @@ export default {
   },
   computed: {
     backgroundImage () {
-      return utils.imagePath(`control/control-${this.type}-${this.direction}${this.active ? '-active' : ''}`)
+      return utils.imagePath(`control/control-${this.type}-${this.direction.name}${this.active ? '-active' : ''}`)
     }
   },
   methods: {
-    action () {
-      console.log(`${this.type} ${this.direction}`)
+    click () {
+      this.$emit(this.type, this.direction)
     }
   }
 }
