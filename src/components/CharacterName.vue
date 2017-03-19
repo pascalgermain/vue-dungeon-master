@@ -32,13 +32,13 @@ export default {
   height: double(14px);
   padding: 0 double(3px);
   background: $color-grey;
-  color: $color-grey-light;
+  color: $color-orange;
   font-size: double(11px);
   line-height: double(15px);
   text-transform: uppercase;
 
   &.active {
-    color: $color-orange;
+    color: $color-yellow;
   }
 }
 </style>
