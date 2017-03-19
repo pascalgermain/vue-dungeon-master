@@ -1,11 +1,13 @@
 <template>
   <div class="character-hand">
-    <div :style="{backgroundImage: 'url(' + backgroundImage + ')'}"></div>
+    <div :style="{backgroundImage: `url(${backgroundImage})`}"></div>
   </div>
 </div>
 </template>
 
 <script>
+import utils from '@/lib/utils'
+
 export default {
   name: 'character-hand',
   props: {
@@ -20,13 +22,8 @@ export default {
   },
   computed: {
     backgroundImage () {
-      if (this.item) return this.imagePath('character-item/character-item-' + this.item)
-      return this.imagePath('character-hand-' + this.side)
-    }
-  },
-  methods: {
-    imagePath (image) {
-      return require('../assets/img/' + image + '.png')
+      if (this.item) return utils.imagePath(`character-item/character-item-${this.item}`)
+      return utils.imagePath(`character-hand-${this.side}`)
     }
   }
 }

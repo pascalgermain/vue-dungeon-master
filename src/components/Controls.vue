@@ -1,10 +1,34 @@
 <template>
-  <div class="controls"></div>
+  <div class="controls">
+    <control
+      v-for="(control, key) in controls"
+      :key="key"
+      :type="control.type"
+      :direction="control.direction"
+    ></control>
+  </div>
 </template>
 
 <script>
+import Control from './Control'
+
 export default {
-  name: 'controls'
+  name: 'controls',
+  components: {
+    Control
+  },
+  data () {
+    return {
+      controls: [
+        {type: 'turn', direction: 'left'},
+        {type: 'move', direction: 'up'},
+        {type: 'turn', direction: 'right'},
+        {type: 'move', direction: 'left'},
+        {type: 'move', direction: 'down'},
+        {type: 'move', direction: 'right'}
+      ]
+    }
+  }
 }
 </script>
 
@@ -17,7 +41,6 @@ export default {
   top: double(248px);
   width: double(174px);
   height: double(90px);
-  background: url(../assets/img/controls.png);
-  background-size: cover;
+  border: double(1px) solid $color-blue-light;
 }
 </style>

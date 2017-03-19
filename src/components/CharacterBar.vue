@@ -1,8 +1,8 @@
 <template>
   <div class="character-bar">
     <div
-      :class="'character-color-' + number"
-      :style="{height: value + '%'}"
+      :class="`character-color-${number}`"
+      :style="{height: `${value}%`}"
     ></div>
   </div>
 </template>
