@@ -2,8 +2,8 @@
   <div class="dungeon">
     <div v-for="row in cells">
       <div
-        class="cell"
         v-for="col in row"
+        :class="['cell', {wall: !!col}]"
       ></div>
     </div>
     <player
@@ -22,6 +22,10 @@ export default {
     Player
   },
   props: {
+    cells: {
+      type: Array,
+      required: true
+    },
     position: {
       type: Object,
       required: true
@@ -29,20 +33,6 @@ export default {
     rotation: {
       type: Number,
       required: true
-    }
-  },
-  data () {
-    return {
-      cells: [
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      ]
     }
   }
 }
@@ -64,6 +54,10 @@ export default {
   float: left;
   width: double(32px);
   height: double(32px);
-  border: double(1px) solid $color-grey;
+  border: double(1px) solid $color-black;
+}
+
+.wall {
+  background: $color-grey;
 }
 </style>

@@ -40,8 +40,11 @@ export default {
   },
   methods: {
     move (direction) {
-      this.position.x += this.directions[direction.value].move.x
-      this.position.y += this.directions[direction.value].move.y
+      const position = {
+        x: this.position.x + this.directions[direction.value].move.x,
+        y: this.position.y + this.directions[direction.value].move.y
+      }
+      if (position) this.position = position
       this.$emit('position', this.position)
     },
     turn (direction) {

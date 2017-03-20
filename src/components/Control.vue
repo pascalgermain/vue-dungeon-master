@@ -4,6 +4,7 @@
       :style="{backgroundImage: `url(${backgroundImage})`}"
       @mousedown="active = true"
       @mouseup="active = false"
+      @mouseout="active = false"
       @click="click"
     ></div>
   </div>
