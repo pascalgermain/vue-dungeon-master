@@ -11,11 +11,12 @@ export default {
 <style lang="scss" scoped>
 @import '../theme/_variables.scss';
 
+$width: zoom(320px);
+$height: zoom(27px);
+
 .messages {
-  position: absolute;
-  left: 0;
   top: zoom(173px);
-  width: zoom(320px);
-  height: zoom(27px);
+  width: $width;
+  height: $height;
 }
 </style>

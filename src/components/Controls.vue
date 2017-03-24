@@ -74,6 +74,8 @@ $height: zoom(45px);
   top: zoom(124px);
   width: $width;
   height: $height;
-  border: zoom(0.5px) solid $color-blue-light; // TODO fix this
+  border: zoom(1px) solid $color-blue-light;
+  background: $color-blue-light;
+  cursor: pointer;
 }
 </style>

@@ -45,6 +45,7 @@ $height: zoom(15px);
 .player {
   width: $width;
   height: $height;
+  margin-top: zoom(4px);
   background-size: 100% 100%;
 }
 </style>

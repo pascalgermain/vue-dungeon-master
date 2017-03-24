@@ -1,11 +1,8 @@
 <template>
-  <div class="list-item control">
-    <div
-      :style="{backgroundImage: `url(${backgroundImage})`}"
-      @mousedown="active = true"
-      @mouseup="active = false"
-      @mouseout="active = false"
-      @click="click"
+  <div
+    class="list-item control"
+    :style="{backgroundImage: `url(${backgroundImage})`}"
+    @mousedown="click"
     ></div>
   </div>
 </template>
@@ -37,6 +34,8 @@ export default {
   },
   methods: {
     click () {
+      this.active = true
+      setTimeout(() => { this.active = false }, 100)
       this.$emit(this.type, this.direction)
     }
   }
@@ -46,24 +45,28 @@ export default {
 <style lang="scss" scoped>
 @import '../theme/_variables.scss';
 
-$width: zoom(29px);
-$height: zoom(22px);
+$width: zoom(28px);
+$height: zoom(21px);
 
 .control {
   width: $width;
   height: $height;
-  border: zoom(0.5px) solid $color-blue-light; // TODO fix this
+  margin-right: zoom(1px);
+  margin-bottom: zoom(1px);
 
   &:nth-child(2),
   &:nth-child(5) {
-    width: $width - zoom(1px); // TODO fix this
+    width: $width - zoom(1px);
   }
 
-  > div {
-    position: static; // TODO fix this
-    height: 100%; // TODO fix this
-    background-size: cover; // TODO image size
-    cursor: pointer; // TODO fix this
+  &:nth-child(3) {
+    margin-right: 0;
+  }
+
+  &:nth-child(4),
+  &:nth-child(5),
+  &:nth-child(6) {
+    margin-bottom: 0;
   }
 }
 </style>

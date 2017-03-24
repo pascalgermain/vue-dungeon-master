@@ -56,6 +56,10 @@ $height: zoom(136px);
 
 .row {
   position: static;
+
+  &:first-child {
+    margin-top: zoom(4px);
+  }
 }
 
 .cell {
