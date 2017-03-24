@@ -8,105 +8,25 @@
 
 $zoom: 4;
 
-$color-black:        rgb(0, 0, 0);
-$color-grey-dark:    rgb(72, 72, 72);
-$color-grey:         rgb(109, 109, 109);
-// $color-grey-light:   rgb(145, 145, 145);
+$color-black:           rgb(  0,   0,   0);
+$color-blue:            rgb(  0,   0, 255);
+$color-green:           rgb(  0, 219,   0);
+$color-blue-light:      rgb(  0, 219, 219);
+$color-grey-dark:       rgb( 73,  73,  73);
+// $color-brown-dark:   rgb(101,  41,  13);
+$color-grey:            rgb(109, 109, 109);
+// $color-brown:        rgb(136,  75,  25);
+// $color-grey-light:   rgb(146, 146, 146);
 // $color-grey-lighter: rgb(182, 182, 182);
-$color-white:        rgb(255, 255, 255);
+//                      rgb(195, 130,  97);
+// $color-brown-light:  rgb(208, 148, 115);
+//                      rgb(227, 162,   0);
+$color-red:             rgb(255,   0,   0);
+$color-orange:          rgb(255, 182,   0);
+$color-yellow:          rgb(255, 255,   0);
+$color-white:           rgb(255, 255, 255);
 
-// $color-brown-dark:  rgb(101, 41, 13);
-// $color-brown:       rgb(136, 75, 25);
-// $color-brown-light: rgb(208, 148, 115);
-
-$color-red: rgb(234, 51, 35);
-
-$color-orange: rgb(244, 184, 64);
-
-$color-yellow: rgb(255, 254, 84);
-
-$color-green: rgb(117, 250, 76);
-
-// $color-blue-dark:  rgb(28, 71, 71);
-$color-blue:       rgb(0, 29, 245);
-$color-blue-light: rgb(98, 215, 216); // Amiga 3.6: rgb(92, 201, 202) , other: rgb(94, 205, 206)
-
-$color-champion-1: $color-green;
-$color-champion-2: $color-yellow;
-$color-champion-3: $color-red;
-$color-champion-4: $color-blue;
-
-// PC
-
-// Resolution: 1280x800
-
-// Splash: 18
-/*
-rgb(  0,   0,   0)
-rgb(  1,   1,   1)
-rgb(  2,   2,   2)
-rgb( 12,  12,  12)
-rgb( 44,  12,  12)
-rgb( 44,  44,  12)
-rgb( 77,  60,  12)
-rgb(109,  93,  12)
-rgb(142, 109,  12)
-rgb(174, 125,  12)
-rgb(174, 158,  12)
-rgb(207, 158,  12)
-rgb(223, 207,  12)
-rgb(239, 174,  12)
-rgb(255,  12,  12)
-rgb(255, 207,  12)
-rgb(255, 239,  12)
-rgb(255, 255, 158)
-*/
-
-// Intro: 16
-/*
-rgb(  0,   0,   0)
-rgb(  0, 146,   0)
-rgb(  0, 182,   0)
-rgb(  0, 219,   0)
-rgb( 73,  73,  73)
-rgb(109,  36,   0)
-rgb(109,  73,  36)
-rgb(109, 109, 109)
-rgb(146,  73,   0)
-rgb(146, 109,  73)
-rgb(146, 146, 146)
-rgb(182, 146, 109)
-rgb(182, 182, 182)
-rgb(219, 182, 146)
-rgb(255,   0,   0)
-rgb(255, 255, 255)
-*/
-
-// Dungeon: 25
-/*
-rgb(  0,   0,   0);
-rgb(  0,   0, 255);
-rgb(  0, 146,   0);
-rgb(  0, 182,   0);
-rgb(  0, 219,   0);
-rgb(  0, 219, 219);
-rgb(  1,   1,   1);
-rgb(  2,   2,   2);
-rgb( 73,  73,  73);
-rgb(109,  36,   0);
-rgb(109,  73,  36);
-rgb(109, 109, 109);
-rgb(146,  73,   0);
-rgb(146, 109,  73);
-rgb(146, 146, 146);
-rgb(182, 146, 109);
-rgb(182, 182, 182);
-rgb(195, 130,  97);
-rgb(219, 146, 109);
-rgb(219, 182, 146);
-rgb(227, 162,   0);
-rgb(255,   0,   0);
-rgb(255, 182,   0);
-rgb(255, 255,   0);
-rgb(255, 255, 255);
-*/
+$color-champion-1:      $color-green;
+$color-champion-2:      $color-yellow;
+$color-champion-3:      $color-red;
+$color-champion-4:      $color-blue;
