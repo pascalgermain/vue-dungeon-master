@@ -1,7 +1,7 @@
 <template>
   <div class="list-item champion-bar">
     <div
-      :class="`champion-color-${number}`"
+      :class="`champion-color-${index}`"
       :style="{height: `${value}%`}"
     ></div>
   </div>
@@ -11,7 +11,7 @@
 export default {
   name: 'champion-bar',
   props: {
-    number: {
+    index: {
       type: Number,
       required: true
     },
@@ -40,6 +40,10 @@ $height: zoom(25px);
   }
 }
 
+.champion-color-0 {
+  background: $color-champion-0;
+}
+
 .champion-color-1 {
   background: $color-champion-1;
 }
@@ -50,9 +54,5 @@ $height: zoom(25px);
 
 .champion-color-3 {
   background: $color-champion-3;
-}
-
-.champion-color-4 {
-  background: $color-champion-4;
 }
 </style>

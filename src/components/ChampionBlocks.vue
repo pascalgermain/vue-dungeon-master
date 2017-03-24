@@ -1,10 +1,9 @@
 <template>
   <div class="champion-blocks">
     <champion-block
-      v-for="(champion, key) in champions"
-      v-if="champion"
-      :key="key"
-      :number="key + 1"
+      v-for="(champion, index) in champions"
+      :key="index"
+      :index="index"
       :champion="champion"
     ></champion-block>
   </div>
@@ -18,10 +17,9 @@ export default {
   components: {
     ChampionBlock
   },
-  props: {
-    champions: {
-      type: Array,
-      required: true
+  computed: {
+    champions () {
+      return this.$store.state.champions
     }
   }
 }

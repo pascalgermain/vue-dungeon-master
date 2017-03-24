@@ -2,7 +2,7 @@
   <div
     class="list-item control"
     :style="{backgroundImage: `url(${backgroundImage})`}"
-    @mousedown="click"
+    @mousedown="click()"
     ></div>
   </div>
 </template>

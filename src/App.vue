@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <champion-blocks :champions="champions"></champion-blocks>
+    <champion-blocks></champion-blocks>
     <champion-views></champion-views>
     <dungeon
       :cells="cells"
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import store from '@/stores/store'
 import ChampionBlocks from './components/ChampionBlocks'
 import ChampionViews from './components/ChampionViews'
 import Dungeon from './components/Dungeon'
@@ -28,6 +29,7 @@ import Messages from './components/Messages'
 
 export default {
   name: 'app',
+  store,
   components: {
     ChampionBlocks,
     ChampionViews,
@@ -39,12 +41,6 @@ export default {
   },
   data () {
     return {
-      champions: [
-        {id: 2, name: 'Halk', hands: {left: 0, right: 0}, params: {health: 100, stamina: 80, mana: 0}, active: false},
-        {id: 4, name: 'Syra', hands: {left: 0, right: 2}, params: {health: 90, stamina: 70, mana: 80}, active: false},
-        {id: 6, name: 'Hissssa', hands: {left: 0, right: 1}, params: {health: 80, stamina: 60, mana: 70}, active: false},
-        {id: 8, name: 'Elija', hands: {left: 0, right: 3}, params: {health: 70, stamina: 50, mana: 60}, active: true}
-      ],
       cells: [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],

@@ -2,11 +2,12 @@
   <div class="list-item champion-block">
     <champion-name
       :name="champion.name"
-      :active="champion.active"
+      :active="active"
+      @click="setActiveChampionIndex()"
     ></champion-name>
     <champion-hands :hands="champion.hands"></champion-hands>
     <champion-bars
-      :number="number"
+      :index="index"
       :params="champion.params"
     ></champion-bars>
   </div>
@@ -26,13 +27,23 @@ export default {
     ChampionBars
   },
   props: {
-    number: {
+    index: {
       type: Number,
       required: true
     },
     champion: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    active () {
+      return this.index === this.$store.state.activeChampionIndex
+    }
+  },
+  methods: {
+    setActiveChampionIndex () {
+      this.$store.dispatch('setActiveChampionIndex', {index: this.index})
     }
   }
 }
@@ -49,5 +60,6 @@ $height: zoom(29px);
   height: $height;
   margin-right: zoom(2px);
   background: $color-grey-dark;
+  cursor: pointer;
 }
 </style>

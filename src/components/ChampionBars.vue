@@ -3,7 +3,7 @@
     <champion-bar
       v-for="(value, name) of params"
       :key="name"
-      :number="number"
+      :index="index"
       :value="value"
     ></champion-bar>
   </div>
@@ -18,7 +18,7 @@ export default {
     ChampionBar
   },
   props: {
-    number: {
+    index: {
       type: Number,
       required: true
     },

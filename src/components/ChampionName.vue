@@ -2,6 +2,7 @@
   <div
     :class="['champion-name', {active}]"
     v-text="name"
+    @mousedown.left="click()"
   ></div>
 </template>
 
@@ -16,6 +17,11 @@ export default {
     active: {
       type: Boolean,
       required: true
+    }
+  },
+  methods: {
+    click () {
+      this.$emit('click')
     }
   }
 }
@@ -36,6 +42,7 @@ $height: zoom(7px);
   font-size: zoom(6px); // TODO font
   line-height: zoom(7px); // TODO font
   text-transform: uppercase; // TODO font
+  cursor: default;
 
   &.active {
     color: $color-yellow; // TODO font
