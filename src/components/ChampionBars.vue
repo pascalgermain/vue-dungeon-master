@@ -1,21 +1,21 @@
 <template>
-  <div class="character-bars">
-    <character-bar
+  <div class="champion-bars">
+    <champion-bar
       v-for="(value, name) of params"
       :key="name"
       :number="number"
       :value="value"
-    ></character-bar>
+    ></champion-bar>
   </div>
 </template>
 
 <script>
-import CharacterBar from './CharacterBar'
+import ChampionBar from './ChampionBar'
 
 export default {
-  name: 'character-bars',
+  name: 'champion-bars',
   components: {
-    CharacterBar
+    ChampionBar
   },
   props: {
     number: {
@@ -33,11 +33,13 @@ export default {
 <style lang="scss" scoped>
 @import '../theme/_variables.scss';
 
-.character-bars {
-  position: absolute;
-  left: double(92px);
-  top: double(4px);
-  width: double(36px);
-  height: double(50px);
+$width: zoom(18px);
+$height: zoom(25px);
+
+.champion-bars {
+  left: zoom(46px);
+  top: zoom(2px);
+  width: $width;
+  height: $height;
 }
 </style>

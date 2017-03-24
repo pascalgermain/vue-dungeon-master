@@ -1,6 +1,12 @@
-@function double ($number) {
-  @return $number * 2
+@function imageUrl ($image) {
+  @return url('../assets/img/' + $image + '.png');
 }
+
+@function zoom ($number) {
+  @return $number * $zoom;
+}
+
+$zoom: 4;
 
 $color-black:        rgb(0, 0, 0);
 $color-grey-dark:    rgb(72, 72, 72);
@@ -25,10 +31,10 @@ $color-green: rgb(117, 250, 76);
 $color-blue:       rgb(0, 29, 245);
 $color-blue-light: rgb(98, 215, 216); // Amiga 3.6: rgb(92, 201, 202) , other: rgb(94, 205, 206)
 
-$color-character-1: $color-green;
-$color-character-2: $color-yellow;
-$color-character-3: $color-red;
-$color-character-4: $color-blue;
+$color-champion-1: $color-green;
+$color-champion-2: $color-yellow;
+$color-champion-3: $color-red;
+$color-champion-4: $color-blue;
 
 // PC
 

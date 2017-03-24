@@ -1,21 +1,21 @@
 <template>
-  <div class="character-hands">
-    <character-hand
+  <div class="champion-hands">
+    <champion-hand
       v-for="(item, side) of hands"
       :key="side"
       :side="side"
       :item="item"
-    ></character-hand>
+    ></champion-hand>
   </div>
 </template>
 
 <script>
-import CharacterHand from './CharacterHand'
+import ChampionHand from './ChampionHand'
 
 export default {
-  name: 'character-hands',
+  name: 'champion-hands',
   components: {
-    CharacterHand
+    ChampionHand
   },
   props: {
     hands: {
@@ -29,11 +29,13 @@ export default {
 <style lang="scss" scoped>
 @import '../theme/_variables.scss';
 
-.character-hands {
-  position: absolute;
-  left: double(6px);
-  top: double(18px);
-  width: double(76px);
-  height: double(36px);
+$width: zoom(38px);
+$height: zoom(18px);
+
+.champion-hands {
+  left: zoom(3px);
+  top: zoom(9px);
+  width: $width;
+  height: $height;
 }
 </style>

@@ -24,11 +24,11 @@ export default {
     style () {
       const left = (this.position.x * 64) + 2
       const top = (this.position.y * 64) + 2
-      const imagePath = utils.imagePath('character-views')
+      const image = utils.image('champion-views')
       return {
         left: `${left}px`,
         top: `${top}px`,
-        backgroundImage: `url(${imagePath})`,
+        backgroundImage: `url(${image})`,
         transform: `rotate(${this.rotation}deg)`
       }
     }
@@ -39,10 +39,12 @@ export default {
 <style lang="scss" scoped>
 @import '../theme/_variables.scss';
 
+$width: zoom(15px);
+$height: zoom(15px);
+
 .player {
-  position: absolute;
-  width: double(30px);
-  height: double(30px);
+  width: $width;
+  height: $height;
   background-size: 100% 100%;
 }
 </style>

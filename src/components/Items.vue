@@ -11,13 +11,15 @@ export default {
 <style lang="scss" scoped>
 @import '../theme/_variables.scss';
 
+$width: zoom(86px);
+$height: zoom(35px);
+
 .items {
-  position: absolute;
-  left: double(466px);
-  top: double(172px);
-  width: double(172px);
-  height: double(70px);
-  background: url(../assets/img/items.png);
-  background-size: cover;
+  left: zoom(233px);
+  top: zoom(86px);
+  width: $width;
+  height: $height;
+  background: imageUrl('items');
+  background-size: cover; // TODO image size
 }
 </style>

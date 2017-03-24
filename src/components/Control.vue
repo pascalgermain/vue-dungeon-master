@@ -1,5 +1,5 @@
 <template>
-  <div class="control">
+  <div class="list-item control">
     <div
       :style="{backgroundImage: `url(${backgroundImage})`}"
       @mousedown="active = true"
@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     backgroundImage () {
-      return utils.imagePath(`control/control-${this.type}-${this.direction.name}${this.active ? '-active' : ''}`)
+      return utils.image(`control/control-${this.type}-${this.direction.name}${this.active ? '-active' : ''}`)
     }
   },
   methods: {
@@ -46,23 +46,24 @@ export default {
 <style lang="scss" scoped>
 @import '../theme/_variables.scss';
 
-$width: 58px;
+$width: zoom(29px);
+$height: zoom(22px);
 
 .control {
-  float: left;
-  width: double($width);
-  height: double(44px);
-  border: double(1px) solid $color-blue-light;
+  width: $width;
+  height: $height;
+  border: zoom(0.5px) solid $color-blue-light; // TODO fix this
 
   &:nth-child(2),
   &:nth-child(5) {
-    width: double($width - 2);
+    width: $width - zoom(1px); // TODO fix this
   }
 
   > div {
-    height: 100%;
-    background-size: cover;
-    cursor: pointer;
+    position: static; // TODO fix this
+    height: 100%; // TODO fix this
+    background-size: cover; // TODO image size
+    cursor: pointer; // TODO fix this
   }
 }
 </style>

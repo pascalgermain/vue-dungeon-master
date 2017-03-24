@@ -65,12 +65,15 @@ export default {
 <style lang="scss" scoped>
 @import '../theme/_variables.scss';
 
+$width: zoom(87px);
+$height: zoom(45px);
+
 .controls {
   position: absolute;
-  left: double(466px);
-  top: double(248px);
-  width: double(174px);
-  height: double(90px);
-  border: double(1px) solid $color-blue-light;
+  left: zoom(233px);
+  top: zoom(124px);
+  width: $width;
+  height: $height;
+  border: zoom(0.5px) solid $color-blue-light; // TODO fix this
 }
 </style>

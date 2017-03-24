@@ -8,12 +8,18 @@ body {
 body {
   margin: 0;
   background: $color-black;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 div {
+  position: absolute;
   box-sizing: border-box;
+}
+
+.list-item {
+  position: relative;
+  float: left;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }

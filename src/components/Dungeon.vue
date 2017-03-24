@@ -1,9 +1,12 @@
 <template>
   <div class="dungeon">
-    <div v-for="row in cells">
+    <div
+      v-for="row in cells"
+      class="row"
+    >
       <div
-        v-for="col in row"
-        :class="['cell', {wall: !!col}]"
+        v-for="cell in row"
+        :class="['list-item', 'cell', {wall: !!cell}]"
       ></div>
     </div>
     <player
@@ -41,20 +44,24 @@ export default {
 <style lang="scss" scoped>
 @import '../theme/_variables.scss';
 
+$width: zoom(224px);
+$height: zoom(136px);
+
 .dungeon {
-  position: absolute;
-  left: 0;
-  top: double(66px);
-  width: double(448px);
-  height: double(272px);
+  top: zoom(33px);
+  width: $width;
+  height: $height;
   background: $color-grey-dark;
 }
 
+.row {
+  position: static;
+}
+
 .cell {
-  float: left;
-  width: double(32px);
-  height: double(32px);
-  border: double(1px) solid $color-black;
+  width: zoom(16px);
+  height: zoom(16px);
+  border: zoom(0.5px) solid $color-black; // TODO fix this
 }
 
 .wall {

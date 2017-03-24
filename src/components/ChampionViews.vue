@@ -1,25 +1,24 @@
 <template>
-  <div class="spells"></div>
+  <div class="champion-views"></div>
 </template>
 
 <script>
 export default {
-  name: 'spells'
+  name: 'champion-views'
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../theme/_variables.scss';
 
-$width: zoom(87px);
-$height: zoom(33px);
+$width: zoom(39px);
+$height: zoom(29px);
 
-.spells {
-  left: zoom(233px);
-  top: zoom(42px);
+.champion-views {
+  left: zoom(281px);
   width: $width;
   height: $height;
-  background: imageUrl('spells');
+  background: imageUrl('champion-views');
   background-size: cover; // TODO image size
 }
 </style>
