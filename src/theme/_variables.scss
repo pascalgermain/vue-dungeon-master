@@ -8,25 +8,28 @@
 
 $zoom: 4;
 
-$color-black:           rgb(  0,   0,   0);
-$color-blue:            rgb(  0,   0, 255);
-$color-green:           rgb(  0, 219,   0);
-$color-blue-light:      rgb( 94, 205, 206); // rgb(  0, 219, 219);
-$color-grey-dark:       rgb( 73,  73,  73);
-// $color-brown-dark:   rgb(101,  41,  13);
-$color-grey:            rgb(109, 109, 109);
-// $color-brown:        rgb(136,  75,  25);
-// $color-grey-light:   rgb(146, 146, 146);
-// $color-grey-lighter: rgb(182, 182, 182);
-//                      rgb(195, 130,  97);
-// $color-brown-light:  rgb(208, 148, 115);
-//                      rgb(227, 162,   0);
-$color-red:             rgb(255,   0,   0);
-$color-orange:          rgb(255, 182,   0);
-$color-yellow:          rgb(255, 255,   0);
-$color-white:           rgb(255, 255, 255);
+$color-black:            rgb(  0,   0,   0);
+$color-grey-dark:        rgb( 73,  73,  73);
+$color-grey:             rgb(109, 109, 109);
+// $color-grey-light:    rgb(146, 146, 146);
+// $color-grey-lighter:  rgb(182, 182, 182);
+// $color-white:         rgb(255, 255, 255);
 
-$color-champion-0:      $color-green;
-$color-champion-1:      $color-yellow;
-$color-champion-2:      $color-red;
-$color-champion-3:      $color-blue;
+// $color-brown-dark:    rgb(109,  36,   0);
+// $color-brown:         rgb(146,  73,   0);
+// $color-brown-light:   rgb(195, 130,  97);
+// $color-brown-lighter: rgb(219, 146, 109);
+
+$color-red:              rgb(255,   0,   0);
+// $color-orange-dark:   rgb(227, 162,   0);
+$color-orange:           rgb(255, 182,   0);
+$color-yellow:           rgb(255, 255,   0);
+// $color-green-dark:    rgb(  0, 146,   0);
+$color-green:            rgb(  0, 219,   0);
+$color-blue:             rgb(  0,   0, 255);
+$color-blue-light:       rgb( 94, 205, 206); // rgb(  0, 219, 219)
+
+$color-champion-0:       $color-green;
+$color-champion-1:       $color-yellow;
+$color-champion-2:       $color-red;
+$color-champion-3:       $color-blue;

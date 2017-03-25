@@ -33,9 +33,9 @@ export default {
     return {
       directions: [
         {name: 'north', move: {x: 0, y: -1}, rotate: 0},
-        {name: 'east', move: {x: 1, y: 0}, rotate: 90},
-        {name: 'south', move: {x: 0, y: 1}, rotate: 180},
-        {name: 'west', move: {x: -1, y: 0}, rotate: 270}
+        {name: 'east', move: {x: 1, y: 0}, rotate: 1},
+        {name: 'south', move: {x: 0, y: 1}, rotate: 2},
+        {name: 'west', move: {x: -1, y: 0}, rotate: 3}
       ],
       controls: [
         {type: 'turn', direction: {name: 'left', value: -1}},

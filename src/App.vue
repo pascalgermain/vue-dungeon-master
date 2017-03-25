@@ -5,6 +5,8 @@
     <dungeon
       :position="position"
       :rotation="rotation"
+      :cells="cells"
+      :wallItems="items.wall"
     ></dungeon>
     <spells></spells>
     <items></items>
@@ -19,7 +21,7 @@
 </template>
 
 <script>
-import constants from '@/constants'
+import data from '@/data/data'
 import store from '@/stores/store'
 import ChampionBlocks from './components/ChampionBlocks'
 import ChampionViews from './components/ChampionViews'
@@ -42,11 +44,7 @@ export default {
     Messages
   },
   data () {
-    return {
-      cells: constants.dungeon.cells,
-      position: constants.dungeon.position,
-      rotation: constants.dungeon.rotation
-    }
+    return data.level
   },
   methods: {
     move (position) {
@@ -56,12 +54,12 @@ export default {
       const cell = this.cells[position.y][position.x]
       switch (cell) {
         case 0:
+          return
+        case 1:
         case 2:
           break
-        case 1:
-          return
         default:
-          this.$store.dispatch('addChampion', {id: cell})
+          this.$store.dispatch('addChampion', {index: cell - 3})
           this.cells[position.y][position.x] = 2
       }
       this.position = position

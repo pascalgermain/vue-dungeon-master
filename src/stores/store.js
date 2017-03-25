@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import constants from '@/constants'
+import data from '@/data/data'
 
 Vue.use(Vuex)
 
@@ -10,8 +10,8 @@ export default new Vuex.Store({
     activeChampionIndex: 0
   },
   mutations: {
-    addChampion (state, {id}) {
-      state.champions.push(constants.champions.find((champion) => champion.id === id))
+    addChampion (state, {index}) {
+      state.champions.push(data.champions[index])
     },
     setActiveChampionIndex (state, {index}) {
       state.activeChampionIndex = index

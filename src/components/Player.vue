@@ -22,14 +22,14 @@ export default {
   },
   computed: {
     style () {
-      const left = (this.position.x * 64) + 2
-      const top = (this.position.y * 64) + 2
+      const left = this.position.x * 28
+      const top = this.position.y * 28
       const image = utils.image('champion-views')
       return {
         left: `${left}px`,
         top: `${top}px`,
         backgroundImage: `url(${image})`,
-        transform: `rotate(${this.rotation}deg)`
+        transform: `rotate(${this.rotation * 90}deg)`
       }
     }
   }
@@ -39,13 +39,12 @@ export default {
 <style lang="scss" scoped>
 @import '../theme/_variables.scss';
 
-$width: zoom(15px);
-$height: zoom(15px);
+$width: zoom(7px);
+$height: zoom(7px);
 
 .player {
   width: $width;
   height: $height;
-  margin-top: zoom(4px);
   background-size: 100% 100%;
 }
 </style>

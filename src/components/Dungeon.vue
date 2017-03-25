@@ -1,29 +1,46 @@
 <template>
   <div class="dungeon">
     <div
-      v-for="row in cells"
-      class="row"
+      class="cells"
+      :style="cellsStyle"
     >
       <div
-        v-for="cell in row"
-        :class="['list-item', 'cell', {wall: cell === 1}, {empty: cell === 2}, {champion: cell > 2}]"
-      ></div>
+        v-for="(row, y) in cells"
+        class="row"
+      >
+        <div
+          v-for="(col, x) in row"
+          :class="['list-item', 'col', {wall: col === 0}, {selected: col === 2}, {active: col > 2}]"
+        >
+          <div
+            v-for="wallItem in cellWallItems[y][x]"
+            v-if="wallItem.type === 2"
+            class="wall-item mirror"
+            :style="{transform: `rotate(${wallItem.rotation * 90}deg)`}"
+          >
+          </div>
+        </div>
+      </div>
+      <player
+        :position="position"
+        :rotation="rotation"
+      ></player>
     </div>
-    <player
-      :position="position"
-      :rotation="rotation"
-    ></player>
   </div>
 </template>
 
 <script>
-import constants from '@/constants'
 import Player from './Player'
 
 export default {
   name: 'dungeon',
   components: {
     Player
+  },
+  data () {
+    return {
+      cellWallItems: []
+    }
   },
   props: {
     position: {
@@ -33,12 +50,38 @@ export default {
     rotation: {
       type: Number,
       required: true
+    },
+    cells: {
+      type: Array,
+      required: true
+    },
+    wallItems: {
+      type: Array,
+      required: true
     }
   },
-  data () {
-    return {
-      cells: constants.dungeon.cells
+  computed: {
+    cellsStyle () {
+      return {
+        width: `${(this.cells[0].length * 28) + 8}px`,
+        height: `${(this.cells.length * 28) + 8}px`
+      }
     }
+  },
+  created () {
+    const cellWallItems = []
+    for (let y = 0; y < this.cells.length; ++y) {
+      cellWallItems[y] = []
+      for (let x = 0; x < this.cells[0].length; ++x) {
+        cellWallItems[y][x] = []
+        for (let i = 0; i < this.wallItems.length; ++i) {
+          if (this.wallItems[i].position.x === x && this.wallItems[i].position.y === y) {
+            cellWallItems[y][x].push(this.wallItems[i])
+          }
+        }
+      }
+    }
+    this.cellWallItems = cellWallItems
   }
 }
 </script>
@@ -56,33 +99,42 @@ $height: zoom(136px);
   background: $color-grey-dark;
 }
 
-.row {
-  position: static;
+.cells {
+  position: relative;
+  margin: zoom(0.5px) auto; // TODO fix this
+  border: zoom(1px) solid $color-black;
+}
 
-  &:first-child {
-    margin-top: zoom(4px);
+.row {
+  position: relative;
+}
+
+.col,
+.wall-item {
+  width: zoom(7px);
+  height: zoom(7px);
+}
+
+.col {
+  background: imageUrl('map/cell');
+}
+
+.wall-item {
+  &.mirror {
+      background: imageUrl('map/mirror');
+      background-size: cover;
   }
 }
 
-.cell {
-  width: zoom(16px);
-  height: zoom(16px);
-  border: zoom(0.5px) solid $color-black; // TODO fix this
-}
-
 .wall {
-  background: $color-grey;
+  background: $color-black;
 }
 
-.champion {
+.selected {
   background: $color-orange;
 }
 
-.empty {
-  background: $color-orange;
-}
-
-.champion {
+.active {
   background: $color-yellow;
 }
 </style>

@@ -23,7 +23,7 @@ export default {
   computed: {
     backgroundImage () {
       if (this.item) return utils.image(`champion-item/champion-item-${this.item}`)
-      return utils.image(`champion-hand-${this.side}`)
+      return utils.image(`champion-hand/champion-hand-${this.side}`)
     }
   }
 }
