@@ -9,7 +9,7 @@
       :wallItems="items.wall"
     ></dungeon>
     <spells></spells>
-    <items></items>
+    <attacks></attacks>
     <controls
       :position="position"
       :rotation="rotation"
@@ -27,7 +27,7 @@ import ChampionBlocks from './components/ChampionBlocks'
 import ChampionViews from './components/ChampionViews'
 import Dungeon from './components/Dungeon'
 import Spells from './components/Spells'
-import Items from './components/Items'
+import Attacks from './components/Attacks'
 import Controls from './components/Controls'
 import Messages from './components/Messages'
 
@@ -39,7 +39,7 @@ export default {
     ChampionViews,
     Dungeon,
     Spells,
-    Items,
+    Attacks,
     Controls,
     Messages
   },

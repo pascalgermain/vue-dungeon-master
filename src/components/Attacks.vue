@@ -1,10 +1,10 @@
 <template>
-  <div class="items"></div>
+  <div class="attacks"></div>
 </template>
 
 <script>
 export default {
-  name: 'items'
+  name: 'attacks'
 }
 </script>
 
@@ -14,12 +14,12 @@ export default {
 $width: zoom(86px);
 $height: zoom(35px);
 
-.items {
+.attacks {
   left: zoom(233px);
   top: zoom(86px);
   width: $width;
   height: $height;
-  background: imageUrl('items');
+  background: imageUrl('attacks');
   background-size: cover; // TODO image size
 }
 </style>
