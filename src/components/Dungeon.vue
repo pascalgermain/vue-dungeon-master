@@ -6,7 +6,7 @@
     >
       <div
         v-for="cell in row"
-        :class="['list-item', 'cell', {wall: !!cell}]"
+        :class="['list-item', 'cell', {wall: cell === 1}, {empty: cell === 2}, {champion: cell > 2}]"
       ></div>
     </div>
     <player
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import constants from '@/constants'
 import Player from './Player'
 
 export default {
@@ -25,10 +26,6 @@ export default {
     Player
   },
   props: {
-    cells: {
-      type: Array,
-      required: true
-    },
     position: {
       type: Object,
       required: true
@@ -36,6 +33,11 @@ export default {
     rotation: {
       type: Number,
       required: true
+    }
+  },
+  data () {
+    return {
+      cells: constants.dungeon.cells
     }
   }
 }
@@ -70,5 +72,17 @@ $height: zoom(136px);
 
 .wall {
   background: $color-grey;
+}
+
+.champion {
+  background: $color-orange;
+}
+
+.empty {
+  background: $color-orange;
+}
+
+.champion {
+  background: $color-yellow;
 }
 </style>

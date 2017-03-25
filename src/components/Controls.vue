@@ -1,8 +1,8 @@
 <template>
   <div class="controls">
     <control
-      v-for="(control, key) in controls"
-      :key="key"
+      v-for="(control, index) in controls"
+      :key="index"
       :type="control.type"
       :direction="control.direction"
       @move="move($event)"
@@ -19,9 +19,18 @@ export default {
   components: {
     Control
   },
+  props: {
+    position: {
+      type: Object,
+      required: true
+    },
+    rotation: {
+      type: Number,
+      required: true
+    }
+  },
   data () {
     return {
-      position: {x: 5, y: 5},
       directions: [
         {name: 'north', move: {x: 0, y: -1}, rotate: 0},
         {name: 'east', move: {x: 1, y: 0}, rotate: 90},
@@ -44,10 +53,9 @@ export default {
         x: this.position.x + this.directions[direction.value].move.x,
         y: this.position.y + this.directions[direction.value].move.y
       }
-      if (position) this.position = position
-      this.$emit('position', this.position)
+      this.$emit('move', position)
     },
-    turn (direction) {
+    turn (direction, init) {
       switch (direction.value) {
         case -1:
           this.directions.unshift(this.directions.pop())
@@ -56,7 +64,14 @@ export default {
           this.directions.push(this.directions.shift())
           break
       }
-      this.$emit('rotation', this.directions[0].rotate)
+      if (init === undefined) this.$emit('rotate', this.directions[0].rotate)
+    }
+  },
+  created () {
+    let turns = 0
+    while (turns < this.directions.length && this.directions[0].rotate !== this.rotation) {
+      this.turn({value: 1}, true)
+      ++turns
     }
   }
 }
