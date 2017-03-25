@@ -11,12 +11,9 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
 
-$width: zoom(320px);
-$height: zoom(27px);
-
 .messages {
   top: zoom(173px);
-  width: $width;
-  height: $height;
+  width: zoom(320px);
+  height: zoom(27px);
 }
 </style>

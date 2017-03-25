@@ -16,8 +16,8 @@ export default {
   },
   computed: {
     style () {
-      if (this.item) return helpers.backroundImage(`champion-item/champion-item-${this.item}`)
-      return helpers.backroundImage(`champion-hand/champion-hand-${this.side}`)
+      if (this.item) return helpers.backgroundImage(`champion-item/champion-item-${this.item}`)
+      return helpers.backgroundImage(`champion-hand/champion-hand-${this.side}`)
     }
   }
 }
@@ -26,12 +26,9 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
 
-$width: zoom(18px);
-$height: zoom(18px);
-
 .champion-hand {
-  width: $width;
-  height: $height;
+  width: zoom(18px);
+  height: zoom(18px);
   margin-right: zoom(2px);
   border: zoom(1px) solid $color-grey;
   background-size: cover; // TODO image size

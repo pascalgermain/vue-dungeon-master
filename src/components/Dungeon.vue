@@ -90,13 +90,10 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
 
-$width: zoom(224px);
-$height: zoom(136px);
-
 .dungeon {
   top: zoom(33px);
-  width: $width;
-  height: $height;
+  width: zoom(224px);
+  height: zoom(136px);
   background: $color-grey-dark;
 }
 

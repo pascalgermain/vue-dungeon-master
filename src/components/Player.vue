@@ -19,7 +19,7 @@ export default {
       return {
         left: `${this.position.x * 28}px`,
         top: `${this.position.y * 28}px`,
-        ...helpers.backgroundImage('champion-views'),
+        ...helpers.backgroundImage('map/player'),
         ...helpers.transformRotate(this.rotation)
       }
     }
@@ -30,12 +30,9 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
 
-$width: zoom(7px);
-$height: zoom(7px);
-
 .player {
-  width: $width;
-  height: $height;
+  width: zoom(7px);
+  height: zoom(7px);
   background-size: 100% 100%;
 }
 </style>

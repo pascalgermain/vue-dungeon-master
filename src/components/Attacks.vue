@@ -11,14 +11,11 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
 
-$width: zoom(86px);
-$height: zoom(35px);
-
 .attacks {
   left: zoom(233px);
   top: zoom(86px);
-  width: $width;
-  height: $height;
+  width: zoom(86px);
+  height: zoom(35px);
   background: imageUrl('attacks');
   background-size: cover; // TODO image size
 }

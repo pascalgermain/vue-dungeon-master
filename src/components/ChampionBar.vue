@@ -22,12 +22,9 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
 
-$width: zoom(4px);
-$height: zoom(25px);
-
 .champion-bar {
-  width: $width;
-  height: $height;
+  width: zoom(4px);
+  height: zoom(25px);
   margin-right: zoom(3px);
 
   > div {

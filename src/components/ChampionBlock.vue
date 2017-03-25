@@ -47,12 +47,9 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
 
-$width: zoom(67px);
-$height: zoom(29px);
-
 .champion-block {
-  width: $width;
-  height: $height;
+  width: zoom(67px);
+  height: zoom(29px);
   margin-right: zoom(2px);
   background: $color-grey-dark;
   cursor: pointer;

@@ -75,15 +75,12 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
 
-$width: zoom(87px);
-$height: zoom(45px);
-
 .controls {
   position: absolute;
   left: zoom(233px);
   top: zoom(124px);
-  width: $width;
-  height: $height;
+  width: zoom(87px);
+  height: zoom(45px);
   border: zoom(1px) solid $color-blue-light;
   background: $color-blue-light;
   cursor: pointer;

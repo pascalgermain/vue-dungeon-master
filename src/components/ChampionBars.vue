@@ -28,13 +28,10 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
 
-$width: zoom(18px);
-$height: zoom(25px);
-
 .champion-bars {
   left: zoom(46px);
   top: zoom(2px);
-  width: $width;
-  height: $height;
+  width: zoom(18px);
+  height: zoom(25px);
 }
 </style>

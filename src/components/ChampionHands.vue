@@ -27,13 +27,10 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
 
-$width: zoom(38px);
-$height: zoom(18px);
-
 .champion-hands {
   left: zoom(3px);
   top: zoom(9px);
-  width: $width;
-  height: $height;
+  width: zoom(38px);
+  height: zoom(18px);
 }
 </style>

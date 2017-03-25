@@ -40,11 +40,10 @@ export default {
 @import '../assets/styles/common.scss';
 
 $width: zoom(28px);
-$height: zoom(21px);
 
 .control {
   width: $width;
-  height: $height;
+  height: zoom(21px);
   margin-right: zoom(1px);
   margin-bottom: zoom(1px);
 

@@ -26,12 +26,9 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
 
-$width: zoom(43px);
-$height: zoom(7px);
-
 .champion-name {
-  width: $width;
-  height: $height;
+  width: zoom(43px);
+  height: zoom(7px);
   padding: 0 zoom(1.5px); // TODO font
   background: $color-grey;
   color: $color-orange; // TODO font

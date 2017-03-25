@@ -28,11 +28,8 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
 
-$width: zoom(274px);
-$height: zoom(29px);
-
 .champion-blocks {
-  width: $width;
-  height: $height;
+  width: zoom(274px);
+  height: zoom(29px);
 }
 </style>
