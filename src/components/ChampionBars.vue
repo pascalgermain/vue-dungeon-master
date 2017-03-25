@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import {propTypes} from '@/utils'
 import ChampionBar from './ChampionBar'
 
 export default {
@@ -18,20 +19,14 @@ export default {
     ChampionBar
   },
   props: {
-    index: {
-      type: Number,
-      required: true
-    },
-    params: {
-      type: Object,
-      required: true
-    }
+    index: propTypes.required.Number,
+    params: propTypes.required.Object
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../theme/_variables.scss';
+@import '../assets/styles/common.scss';
 
 $width: zoom(18px);
 $height: zoom(25px);

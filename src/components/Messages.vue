@@ -9,7 +9,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../theme/_variables.scss';
+@import '../assets/styles/common.scss';
 
 $width: zoom(320px);
 $height: zoom(27px);

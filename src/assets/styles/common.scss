@@ -1,5 +1,5 @@
 @function imageUrl ($image) {
-  @return url('../assets/img/' + $image + '.png');
+  @return url('../assets/images/' + $image + '.png');
 }
 
 @function zoom ($number) {

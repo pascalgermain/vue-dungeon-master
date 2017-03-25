@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import data from '@/data/data'
-import store from '@/stores/store'
+import {levels} from './data'
+import store from './store'
 import ChampionBlocks from './components/ChampionBlocks'
 import ChampionViews from './components/ChampionViews'
 import Dungeon from './components/Dungeon'
@@ -44,7 +44,7 @@ export default {
     Messages
   },
   data () {
-    return data.level
+    return levels[0]
   },
   methods: {
     move (position) {
@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './theme/_variables.scss';
+@import './assets/styles/common.scss';
 
 $width: zoom(320px);
 $height: zoom(200px);

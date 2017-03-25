@@ -6,30 +6,21 @@
 </template>
 
 <script>
-import utils from '@/lib/utils'
+import {helpers, propTypes} from '@/utils'
 
 export default {
   name: 'player',
   props: {
-    position: {
-      type: Object,
-      required: true
-    },
-    rotation: {
-      type: Number,
-      required: true
-    }
+    position: propTypes.required.Object,
+    rotation: propTypes.required.Number
   },
   computed: {
     style () {
-      const left = this.position.x * 28
-      const top = this.position.y * 28
-      const image = utils.image('champion-views')
       return {
-        left: `${left}px`,
-        top: `${top}px`,
-        backgroundImage: `url(${image})`,
-        transform: `rotate(${this.rotation * 90}deg)`
+        left: `${this.position.x * 28}px`,
+        top: `${this.position.y * 28}px`,
+        ...helpers.backgroundImage('champion-views'),
+        ...helpers.transformRotate(this.rotation)
       }
     }
   }
@@ -37,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../theme/_variables.scss';
+@import '../assets/styles/common.scss';
 
 $width: zoom(7px);
 $height: zoom(7px);

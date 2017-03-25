@@ -3,9 +3,9 @@ export default [
     id: 0,
     position: {x: 1, y: 3},
     rotation: 2,
-    cells: [
+    cells: [ // 0 wall, 1 empty
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       [0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       [0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
       [0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
@@ -24,8 +24,8 @@ export default [
       [0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0],
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     ],
-    items: { // type: 0 manacles, 1 switch door, 2 mirror, 3 hook, 4 LazyHall (writing), 5 LazyAltar (writing), 6 Altar, 7 Fence, 8 Ring, 9 Grate, 10 TorchFull, 11 TorchEmpty, 12 scroll on altar
-      wall: [
+    items: {
+      wall: [ // type: 0 manacles, 1 switch door, 2 mirror, 3 hook, 4 LazyHall (writing), 5 LazyAltar (writing), 6 Altar, 7 Fence, 8 Ring, 9 Grate, 10 TorchFull, 11 TorchEmpty, 12 scroll on altar
         {
           position: {x: 4, y: 18},
           rotation: 0,

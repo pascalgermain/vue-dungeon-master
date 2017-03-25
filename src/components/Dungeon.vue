@@ -9,14 +9,14 @@
         class="row"
       >
         <div
-          v-for="(col, x) in row"
-          :class="['list-item', 'col', {wall: col === 0}, {selected: col === 2}, {active: col > 2}]"
+          v-for="(cell, x) in row"
+          :class="cellClass(cell)"
         >
           <div
-            v-for="wallItem in cellWallItems[y][x]"
-            v-if="wallItem.type === 2"
-            class="wall-item mirror"
-            :style="{transform: `rotate(${wallItem.rotation * 90}deg)`}"
+            v-for="cellWallItem in cellWallItems[y][x]"
+            v-if="cellWallItem.type === 2"
+            class="cell-wall-item mirror"
+            :style="cellWallItemStyle(cellWallItem)"
           >
           </div>
         </div>
@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import {helpers, propTypes} from '@/utils'
 import Player from './Player'
 
 export default {
@@ -43,22 +44,10 @@ export default {
     }
   },
   props: {
-    position: {
-      type: Object,
-      required: true
-    },
-    rotation: {
-      type: Number,
-      required: true
-    },
-    cells: {
-      type: Array,
-      required: true
-    },
-    wallItems: {
-      type: Array,
-      required: true
-    }
+    position: propTypes.required.Object,
+    rotation: propTypes.required.Number,
+    cells: propTypes.required.Array,
+    wallItems: propTypes.required.Array
   },
   computed: {
     cellsStyle () {
@@ -68,26 +57,38 @@ export default {
       }
     }
   },
+  methods: {
+    cellClass (cell) {
+      return [
+        'list-item',
+        'cell',
+        {wall: cell === 0},
+        {selected: cell === 2},
+        {active: cell > 2}
+      ]
+    },
+    cellWallItemStyle (cellWallItem) {
+      return helpers.transformRotate(cellWallItem.rotation)
+    }
+  },
   created () {
-    const cellWallItems = []
     for (let y = 0; y < this.cells.length; ++y) {
-      cellWallItems[y] = []
+      this.cellWallItems[y] = []
       for (let x = 0; x < this.cells[0].length; ++x) {
-        cellWallItems[y][x] = []
+        this.cellWallItems[y][x] = []
         for (let i = 0; i < this.wallItems.length; ++i) {
           if (this.wallItems[i].position.x === x && this.wallItems[i].position.y === y) {
-            cellWallItems[y][x].push(this.wallItems[i])
+            this.cellWallItems[y][x].push(this.wallItems[i])
           }
         }
       }
     }
-    this.cellWallItems = cellWallItems
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../theme/_variables.scss';
+@import '../assets/styles/common.scss';
 
 $width: zoom(224px);
 $height: zoom(136px);
@@ -109,20 +110,20 @@ $height: zoom(136px);
   position: relative;
 }
 
-.col,
-.wall-item {
+.cell,
+.cell-wall-item {
   width: zoom(7px);
   height: zoom(7px);
 }
 
-.col {
+.cell {
   background: imageUrl('map/cell');
 }
 
-.wall-item {
+.cell-wall-item {
   &.mirror {
-      background: imageUrl('map/mirror');
-      background-size: cover;
+    background: imageUrl('map/mirror');
+    background-size: cover;
   }
 }
 

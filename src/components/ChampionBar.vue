@@ -8,23 +8,19 @@
 </template>
 
 <script>
+import {propTypes} from '@/utils'
+
 export default {
   name: 'champion-bar',
   props: {
-    index: {
-      type: Number,
-      required: true
-    },
-    value: {
-      type: Number,
-      required: true
-    }
+    index: propTypes.required.Number,
+    value: propTypes.required.Number
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../theme/_variables.scss';
+@import '../assets/styles/common.scss';
 
 $width: zoom(4px);
 $height: zoom(25px);

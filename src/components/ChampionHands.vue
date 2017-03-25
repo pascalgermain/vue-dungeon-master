@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import {propTypes} from '@/utils'
 import ChampionHand from './ChampionHand'
 
 export default {
@@ -18,16 +19,13 @@ export default {
     ChampionHand
   },
   props: {
-    hands: {
-      type: Object,
-      required: true
-    }
+    hands: propTypes.required.Object
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../theme/_variables.scss';
+@import '../assets/styles/common.scss';
 
 $width: zoom(38px);
 $height: zoom(18px);

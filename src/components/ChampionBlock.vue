@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import {propTypes} from '@/utils'
 import ChampionName from './ChampionName'
 import ChampionHands from './ChampionHands'
 import ChampionBars from './ChampionBars'
@@ -27,14 +28,8 @@ export default {
     ChampionBars
   },
   props: {
-    index: {
-      type: Number,
-      required: true
-    },
-    champion: {
-      type: Object,
-      required: true
-    }
+    index: propTypes.required.Number,
+    champion: propTypes.required.Object
   },
   computed: {
     active () {
@@ -50,7 +45,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../theme/_variables.scss';
+@import '../assets/styles/common.scss';
 
 $width: zoom(67px);
 $height: zoom(29px);

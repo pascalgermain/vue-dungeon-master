@@ -1,26 +1,20 @@
 <template>
   <div
     class="list-item control"
-    :style="{backgroundImage: `url(${backgroundImage})`}"
+    :style="style"
     @mousedown="click()"
     ></div>
   </div>
 </template>
 
 <script>
-import utils from '@/lib/utils'
+import {helpers, propTypes} from '@/utils'
 
 export default {
   name: 'control',
   props: {
-    type: {
-      type: String,
-      required: true
-    },
-    direction: {
-      type: Object,
-      required: true
-    }
+    type: propTypes.required.String,
+    direction: propTypes.required.Object
   },
   data () {
     return {
@@ -28,8 +22,8 @@ export default {
     }
   },
   computed: {
-    backgroundImage () {
-      return utils.image(`control/control-${this.type}-${this.direction.name}${this.active ? '-active' : ''}`)
+    style () {
+      return helpers.backgroundImage(`control/control-${this.type}-${this.direction.name}${this.active ? '-active' : ''}`)
     }
   },
   methods: {
@@ -43,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../theme/_variables.scss';
+@import '../assets/styles/common.scss';
 
 $width: zoom(28px);
 $height: zoom(21px);

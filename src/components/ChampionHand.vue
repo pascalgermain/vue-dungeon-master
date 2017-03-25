@@ -1,36 +1,30 @@
 <template>
   <div
     class="list-item champion-hand"
-    :style="{backgroundImage: `url(${backgroundImage})`}">
+    :style="style">
   </div>
 </template>
 
 <script>
-import utils from '@/lib/utils'
+import {helpers, propTypes} from '@/utils'
 
 export default {
   name: 'champion-hand',
   props: {
-    side: {
-      type: String,
-      required: true
-    },
-    item: {
-      type: Number,
-      required: true
-    }
+    side: propTypes.required.String,
+    item: propTypes.required.Number
   },
   computed: {
-    backgroundImage () {
-      if (this.item) return utils.image(`champion-item/champion-item-${this.item}`)
-      return utils.image(`champion-hand/champion-hand-${this.side}`)
+    style () {
+      if (this.item) return helpers.backroundImage(`champion-item/champion-item-${this.item}`)
+      return helpers.backroundImage(`champion-hand/champion-hand-${this.side}`)
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../theme/_variables.scss';
+@import '../assets/styles/common.scss';
 
 $width: zoom(18px);
 $height: zoom(18px);

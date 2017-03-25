@@ -7,17 +7,13 @@
 </template>
 
 <script>
+import {propTypes} from '@/utils'
+
 export default {
   name: 'champion-name',
   props: {
-    name: {
-      type: String,
-      required: true
-    },
-    active: {
-      type: Boolean,
-      required: true
-    }
+    name: propTypes.required.String,
+    active: propTypes.required.Boolean
   },
   methods: {
     click () {
@@ -28,7 +24,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../theme/_variables.scss';
+@import '../assets/styles/common.scss';
 
 $width: zoom(43px);
 $height: zoom(7px);

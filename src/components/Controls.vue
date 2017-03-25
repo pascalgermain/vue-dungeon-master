@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import {propTypes} from '@/utils'
 import Control from './Control'
 
 export default {
@@ -20,14 +21,8 @@ export default {
     Control
   },
   props: {
-    position: {
-      type: Object,
-      required: true
-    },
-    rotation: {
-      type: Number,
-      required: true
-    }
+    position: propTypes.required.Object,
+    rotation: propTypes.required.Number
   },
   data () {
     return {
@@ -78,7 +73,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../theme/_variables.scss';
+@import '../assets/styles/common.scss';
 
 $width: zoom(87px);
 $height: zoom(45px);
