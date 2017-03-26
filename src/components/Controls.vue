@@ -12,17 +12,12 @@
 </template>
 
 <script>
-import {propTypes} from '@/utils'
 import Control from './Control'
 
 export default {
   name: 'controls',
   components: {
     Control
-  },
-  props: {
-    position: propTypes.required.Object,
-    rotation: propTypes.required.Number
   },
   data () {
     return {
@@ -44,11 +39,7 @@ export default {
   },
   methods: {
     move (direction) {
-      const position = {
-        x: this.position.x + this.directions[direction.value].move.x,
-        y: this.position.y + this.directions[direction.value].move.y
-      }
-      this.$emit('move', position)
+      this.$store.dispatch('moveChampions', {move: this.directions[direction.value].move})
     },
     turn (direction, init) {
       switch (direction.value) {
@@ -59,12 +50,12 @@ export default {
           this.directions.push(this.directions.shift())
           break
       }
-      if (init === undefined) this.$emit('rotate', this.directions[0].rotate)
+      if (init === undefined) this.$store.dispatch('rotateChampions', {rotation: this.directions[0].rotate})
     }
   },
   created () {
     let turns = 0
-    while (turns < this.directions.length && this.directions[0].rotate !== this.rotation) {
+    while (turns < this.directions.length && this.directions[0].rotate !== this.$store.state.rotation) {
       this.turn({value: 1}, true)
       ++turns
     }

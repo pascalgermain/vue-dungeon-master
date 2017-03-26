@@ -6,21 +6,17 @@
 </template>
 
 <script>
-import {helpers, propTypes} from '@/utils'
+import {helpers} from '@/utils'
 
 export default {
   name: 'player',
-  props: {
-    position: propTypes.required.Object,
-    rotation: propTypes.required.Number
-  },
   computed: {
     style () {
       return {
-        left: `${this.position.x * 28}px`,
-        top: `${this.position.y * 28}px`,
+        left: `${this.$store.state.position.x * 28}px`,
+        top: `${this.$store.state.position.y * 28}px`,
         ...helpers.backgroundImage('map/player'),
-        ...helpers.transformRotate(this.rotation)
+        ...helpers.transformRotate(this.$store.state.rotation)
       }
     }
   }

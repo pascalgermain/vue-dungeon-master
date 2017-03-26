@@ -21,16 +21,13 @@
           </div>
         </div>
       </div>
-      <player
-        :position="position"
-        :rotation="rotation"
-      ></player>
+      <player></player>
     </div>
   </div>
 </template>
 
 <script>
-import {helpers, propTypes} from '@/utils'
+import {helpers} from '@/utils'
 import Player from './Player'
 
 export default {
@@ -43,13 +40,16 @@ export default {
       cellWallItems: []
     }
   },
-  props: {
-    position: propTypes.required.Object,
-    rotation: propTypes.required.Number,
-    cells: propTypes.required.Array,
-    wallItems: propTypes.required.Array
-  },
   computed: {
+    level () {
+      return this.$store.state.levels[this.$store.state.activeLevelIndex]
+    },
+    cells () {
+      return this.level.cells
+    },
+    wallItems () {
+      return this.level.items.wall
+    },
     cellsStyle () {
       return {
         width: `${(this.cells[0].length * 28) + 8}px`,

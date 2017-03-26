@@ -2,26 +2,15 @@
   <div id="app">
     <champion-blocks></champion-blocks>
     <champion-views></champion-views>
-    <dungeon
-      :position="position"
-      :rotation="rotation"
-      :cells="cells"
-      :wallItems="items.wall"
-    ></dungeon>
+    <dungeon></dungeon>
     <spells></spells>
     <attacks></attacks>
-    <controls
-      :position="position"
-      :rotation="rotation"
-      @move="move($event)"
-      @rotate="rotate($event)"
-    ></controls>
+    <controls></controls>
     <messages></messages>
   </div>
 </template>
 
 <script>
-import {levels} from './data'
 import store from './store'
 import ChampionBlocks from './components/ChampionBlocks'
 import ChampionViews from './components/ChampionViews'
@@ -42,31 +31,6 @@ export default {
     Attacks,
     Controls,
     Messages
-  },
-  data () {
-    return levels[0]
-  },
-  methods: {
-    move (position) {
-      const xMax = this.cells[0].length - 1
-      const yMax = this.cells.length - 1
-      if (position.x < 0 || position.y < 0 || position.x > xMax || position.y > yMax) return
-      const cell = this.cells[position.y][position.x]
-      switch (cell) {
-        case 0:
-          return
-        case 1:
-        case 2:
-          break
-        default:
-          this.$store.dispatch('addChampion', {index: cell - 3})
-          this.cells[position.y][position.x] = 2
-      }
-      this.position = position
-    },
-    rotate (rotation) {
-      this.rotation = rotation
-    }
   }
 }
 </script>
