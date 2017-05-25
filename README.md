@@ -1,6 +1,8 @@
-# DM
+# Vue Dungeon Master
 
-> A Vue.js project
+> Small POC of a classic Dungeon Master game port on VueJS + VueX.
+
+> http://pascalgermain.github.io/vue-dungeon-master/
 
 ## Build Setup
 

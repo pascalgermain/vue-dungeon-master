@@ -1,10 +1,11 @@
 {
-  "name": "dm",
+  "name": "vue-dungeon-master",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "Small POC of a classic Dungeon Master game port on VueJS + VueX.",
   "author": "Pascal Germain <pascalgermain@me.com>",
-  "private": true,
+  "homepage": "http://pascalgermain.github.io/vue-dungeon-master",
   "scripts": {
+    "start": "npm run dev",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src"
