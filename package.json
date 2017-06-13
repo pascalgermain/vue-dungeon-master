@@ -1,7 +1,7 @@
 {
   "name": "vue-dungeon-master",
   "version": "1.0.0",
-  "description": "Small POC of a classic Dungeon Master game port on VueJS + VueX.",
+  "description": "Small POC of a classic Dungeon Master game port on Vue.js + Vuex.",
   "author": "Pascal Germain <pascalgermain@me.com>",
   "homepage": "http://pascalgermain.github.io/vue-dungeon-master",
   "scripts": {
