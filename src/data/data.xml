@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<levels>
+		<level>
+			<id>0</id>
+			<name>Hall of Champions</name>
+			<cols>18</cols>
+			<rows>19</rows>
+			<start>1,3,2</start> <!-- col, row, facing (8 north, 6 east, 2 south, 4 west) -->
+			<map>
+<!--		 		 	 0  1	 2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 -->
+<!--		0 -->	00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,
+<!--		1	-->	00,00,00,00,00,00,11,00,00,00,00,00,00,00,00,00,00,00,
+<!--		2	-->	00,11,00,00,11,11,11,00,00,00,00,00,00,00,00,00,00,00,
+<!--		3	-->	00,11,00,00,11,00,11,11,11,00,00,00,00,11,11,11,00,00,
+<!--		4	-->	00,11,00,00,11,00,11,00,11,11,11,11,11,11,11,11,00,00,
+<!--		5	-->	11,11,00,00,11,00,00,00,00,11,11,11,00,11,11,11,00,00,
+<!--		6	-->	00,11,00,00,11,00,00,00,00,11,00,11,00,11,11,11,11,11,
+<!--		7	-->	00,11,11,11,11,00,00,00,00,11,11,11,00,00,00,11,00,11,
+<!--		8	-->	00,00,00,00,00,00,00,00,00,11,00,00,00,00,00,11,11,11,
+<!--		9	-->	00,00,00,00,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+<!--	 10	-->	00,00,00,00,11,00,00,11,00,00,11,11,11,00,11,00,11,00,
+<!--	 11	-->	00,11,11,00,11,11,00,11,00,00,00,00,00,00,11,00,11,00,
+<!--	 12	-->	00,11,11,00,11,00,11,11,11,11,00,00,00,11,11,00,11,00,
+<!--	 13	--> 00,11,11,00,11,00,11,11,11,11,00,00,11,11,11,00,11,00,
+<!--	 14	-->	00,11,00,00,11,00,11,00,00,11,00,11,11,11,00,11,11,11,
+<!--	 15	-->	00,11,00,11,11,00,11,11,11,11,11,11,11,00,00,11,00,11,
+<!--	 16	-->	11,11,00,00,11,00,11,11,11,11,00,00,00,00,00,11,00,11,
+<!--	 17	-->	00,11,11,11,11,00,00,00,00,00,00,00,00,00,00,11,11,11,
+<!--	 18	-->	00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+			</map>
+			<collectibles>
+				<!-- 0 Apple, 1 Water, 2 Scroll, 3 Bread, 4 Corn, 5 Cheese -->
+				<item>
+					<pos>4,9,7</pos> <!-- x,y, angle repect to north (7 9 3 1) -->
+					<type>0</type>
+				</item>
+				<item>
+					<pos>4,15,7</pos> <!-- x,y, angle repect to north (7 9 3 1) -->
+					<type>1</type>
+				</item>
+				<item>
+					<pos>4,15,9</pos> <!-- x,y, angle repect to north (7 9 3 1) -->
+					<type>2</type>
+				</item>
+				<item>
+					<pos>5,11,9</pos> <!-- x,y, angle repect to north (7 9 3 1) -->
+					<type>3</type>
+				</item>
+				<item>
+					<pos>0,16,1</pos> <!-- x,y, angle repect to north (7 9 3 1) -->
+					<type>4</type>
+				</item>
+
+				<item>
+					<pos>2,13,3</pos> <!-- x,y, angle repect to north (7 9 3 1) -->
+					<type>3</type>
+				</item>
+				<item>
+					<pos>2,12,9</pos> <!-- x,y, angle repect to north (7 9 3 1) -->
+					<type>5</type>
+				</item>
+				<item>
+					<pos>2,11,9</pos> <!-- x,y, angle repect to north (7 9 3 1) -->
+					<type>0</type>
+				</item>
+
+
+
+			</collectibles>
+
+			<wallOrnament>
+				<!-- 0 manacles, 1 switch door, 2 mirror, 3 hook , 4 LazyHall (writing), 5 LazyAltar (writing), 6 Altar, 7 Fence, 8 Ring, 9 Grate, 10 TorchFull, 11 TorchEmpty ,12 scroll on altar-->
+
+				<item>
+					<pos>4,18,8</pos> <!-- x,y facing -->
+					<type>6</type>
+				</item>
+				<item>
+					<pos>4,18,8</pos> <!-- x,y facing -->
+					<type>12</type>
+				</item>
+				<item>
+					<pos>3,14,6</pos> <!-- x,y facing -->
+					<type>11</type>
+				</item>
+				<item>
+					<pos>3,14,6</pos> <!-- x,y facing -->
+					<type>10</type>
+				</item>
+				<item>
+					<pos>12,6,4</pos> <!-- x,y facing -->
+					<type>9</type>
+				</item>
+				<item>
+					<pos>5,10,2</pos> <!-- x,y facing -->
+					<type>9</type>
+				</item>
+				<item>
+					<pos>3,18,8</pos> <!-- x,y facing -->
+					<type>9</type>
+				</item>
+				<item>
+					<pos>2,16,2</pos> <!-- x,y facing -->
+					<type>9</type>
+				</item>
+				<item>
+					<pos>17,11,4</pos> <!-- x,y facing -->
+					<type>8</type>
+				</item>
+				<item>
+					<pos>13,8,2</pos> <!-- x,y facing -->
+					<type>8</type>
+				</item>
+				<item>
+					<pos>10,14,2</pos> <!-- x,y facing -->
+					<type>8</type>
+				</item>
+				<item>
+					<pos>5,15,4</pos> <!-- x,y facing -->
+					<type>8</type>
+				</item>
+				<item>
+					<pos>3,16,6</pos> <!-- x,y facing -->
+					<type>8</type>
+				</item>
+				<item>
+					<pos>0,17,6</pos> <!-- x,y facing -->
+					<type>8</type>
+				</item>
+				<item>
+					<pos>3,9,6</pos> <!-- x,y facing -->
+					<type>0</type>
+				</item>
+				<item>
+					<pos>1,14,8</pos> <!-- x,y facing -->
+					<type>1</type>
+				</item>
+				<item>
+					<pos>1,14,2</pos> <!-- x,y facing -->
+					<type>1</type>
+				</item>
+				<item>
+					<pos>5,12,6</pos> <!-- x,y facing -->
+					<type>3</type>
+				</item>
+				<item>
+					<pos>7,1,4</pos> <!-- x,y facing -->
+					<type>3</type>
+				</item>
+				<item>
+					<pos>5,4,6</pos> <!-- x,y facing -->
+					<type>3</type>
+				</item>
+				<item>
+					<pos>8,5,8</pos> <!-- x,y facing -->
+					<type>4</type>
+				</item>
+				<item>
+					<pos>5,17,4</pos> <!-- x,y facing -->
+					<type>5</type>
+				</item>
+				<item>
+					<pos>14,8,2</pos> <!-- x,y facing -->
+					<type>7</type>
+				</item>
+				<item>
+					<pos>10,14,6</pos> <!-- x,y facing -->
+					<type>7</type>
+				</item>
+				<item>
+					<pos>16,5,2</pos> <!-- x,y facing -->
+					<type>7</type>
+				</item>
+				<item>
+					<!-- IAIDO RUYTO CHIBURI -->
+					<pos>10,3,2</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- CHANI SAYYADINA SIHAYA -->
+					<pos>14,2,2</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- HAWK THE FEARLESS -->
+					<pos>16,4,4</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- BORIS WIZARD OF BALDOR -->
+					<pos>14,7,8</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- ALEX ANDER -->
+					<pos>16,7,2</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- NABI THE PROPHET -->
+					<pos>17,10,8</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- HISSSSA LIZAR OF MAKAN -->
+					<pos>16,15,8</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- GOTHMOG -->
+					<pos>16,16,2</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- SONJA SHE DEVIL -->
+					<pos>15,12,4</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- LEYLA SHADOWSEEK -->
+					<pos>13,11,2</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- MOPHUS THE HEALER -->
+					<pos>14,14,4</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- WUUF THE BIKA -->
+					<pos>11,13,6</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- STAMM BLADECASTER -->
+					<pos>11,16,8</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- LEIF THE VALIANT -->
+					<pos>8,14,2</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- AZIZI JOHARI -->
+					<pos>7,17,8</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- DAROOU -->
+					<pos>5,13,6</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- WU TSE SON OF HEAVEN -->
+					<pos>7,14,8</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- TIGGY TAMAL -->
+					<pos>10,13,4</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- HALK THE BARBARIAN -->
+					<pos>7,8,2</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- SYRA CHILD OF NATURE -->
+					<pos>9,10,8</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- GANDO THURFOOT -->
+					<pos>11,11,8</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- LINFLAS -->
+					<pos>12,8,2</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- ELIJA LION OF YAITOPYA -->
+					<pos>8,7,6</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- ZED DUKE OF BANVILLE -->
+					<pos>10,6,8</pos>
+					<type>2</type>
+				</item>
+			</wallOrnament>
+			<script>
+				<!-- 0 switch,1 pressure plate, 2 mirror, 3 torch, 4 scroll on altar, 5 go down, 6 end demo -->
+				<item>
+					<pos>1,15</pos>
+					<type>0</type>
+					<params>1,14,8</params> <!-- cell with door x,y, facing -->
+				</item>
+				<item>
+					<pos>1,13</pos>
+					<type>0</type>
+					<params>1,14,2</params> <!-- cell with door x,y, facing -->
+				</item>
+				<item>
+					<pos>6,9</pos>
+					<type>1</type>
+					<params>5,9</params> <!-- cell with door x,y-->
+				</item>
+				<item>
+					<pos>4,14</pos>
+					<type>3</type>
+					<params>3,14,6</params> <!-- cell with torch-->
+				</item>
+				<item>
+					<pos>4,17</pos>
+					<type>4</type>
+					<params>4,18,8</params> <!-- altar with scroll -->
+				</item>
+				<item>
+					<pos>3,15</pos>
+					<type>5</type>
+					<params>6,1</params> <!-- exclude script when facing, new level, posx, posy, facing -->
+				</item>
+				<item>
+					<!-- IAIDO RUYTO CHIBURI -->
+					<pos>10,4</pos>
+					<params>10,3,2,14</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- CHANI SAYYADINA SIHAYA -->
+					<pos>14,3</pos>
+					<params>14,2,2,5</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- HAWK THE FEARLESS -->
+					<pos>15,4</pos>
+					<params>16,4,4,6</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- BORIS WIZARD OF BALDOR -->
+					<pos>14,6</pos>
+					<params>14,7,8,7</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- ALEX ANDER -->
+					<pos>16,8</pos>
+					<params>16,7,2,11</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- NABI THE PROPHET -->
+					<pos>17,9</pos>
+					<params>17,10,8,20</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- HISSSSA LIZAR OF MAKAN -->
+					<pos>16,14</pos>
+					<params>16,15,8,3</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- GOTHMOG -->
+					<pos>16,17</pos>
+					<params>16,16,2,21</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- SONJA SHE DEVIL -->
+					<pos>14,12</pos>
+					<params>15,12,4,19</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- LEYLA SHADOWSEEK -->
+					<pos>13,12</pos>
+					<params>13,11,2,17</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- MOPHUS THE HEALER -->
+					<pos>13,14</pos>
+					<params>14,14,4,8</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- WUUF THE BIKA -->
+					<pos>12,13</pos>
+					<params>11,13,6,22</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- STAMM BLADECASTER -->
+					<pos>11,15</pos>
+					<params>11,16,8,16</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- LEIF THE VALIANT -->
+					<pos>8,15</pos>
+					<params>8,14,2,9</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- AZIZI JOHARI -->
+					<pos>7,16</pos>
+					<params>7,17,8,13</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- DAROOU -->
+					<pos>6,13</pos>
+					<params>5,13,6,23</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- WU TSE SON OF HEAVEN -->
+					<pos>7,13</pos>
+					<params>7,14,8,10</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- TIGGY TAMAL -->
+					<pos>9,13</pos>
+					<params>10,13,4,18</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- HALK THE BARBARIAN -->
+					<pos>7,9</pos>
+					<params>7,8,2,1</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- SYRA CHILD OF NATURE -->
+					<pos>9,9</pos>
+					<params>9,10,8,2</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- GANDO THURFOOT -->
+					<pos>11,10</pos>
+					<params>11,11,8,15</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- LINFLAS -->
+					<pos>12,9</pos>
+					<params>12,8,2,12</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- ELIJA LION OF YAITOPYA -->
+					<pos>9,7</pos>
+					<params>8,7,6,0</params>
+					<type>2</type>
+				</item>
+				<item>
+					<!-- ZED DUKE OF BANVILLE -->
+					<pos>10,5</pos>
+					<params>10,6,8,4</params>
+					<type>2</type>
+				</item>
+			</script>
+			<stair>
+				<!-- 0 down, 1 up -->
+				<item>
+					<pos>3,15,6,6</pos> <!-- x,y,facing, facing when exiting -->
+					<type>0</type>
+				</item>
+			</stair>
+			<door>
+				<!-- 0 wooden, 1 grate , 2 entrance-->
+				<item>
+					<pos>5,9,6,false</pos> <!-- x,y facing, opened -->
+					<type>1</type>
+				</item>
+				<item>
+					<pos>1,14,8,false</pos> <!-- x,y facing, opened -->
+					<type>0</type>
+				</item>
+				<item>
+					<pos>1,2,8,false</pos> <!-- x,y facing, opened -->
+					<type>2</type>
+				</item>
+			</door>
+			<floorOrnament>
+				<!-- 0 moss, 1 water, 2 pressure plate -->
+				<item>
+					<pos>4,3</pos>
+					<type>0</type>
+				</item>
+				<item>
+					<pos>5,2</pos>
+					<type>1</type>
+				</item>
+				<item>
+					<pos>2,12</pos>
+					<type>0</type>
+				</item>
+				<item>
+					<pos>6,9</pos>
+					<type>2</type>
+				</item>
+			</floorOrnament>
+
+		</level>
+		<level>
+			<id>1</id>
+			<name>End of demo</name>
+			<cols>12</cols>
+			<rows>7</rows>
+			<start>1,3,2</start> <!-- col, row, facing (8 north, 6 east, 2 south, 4 west) -->
+			<map>
+<!--		 		 	 0  1	 2  3  4  5  6  7  8  9 10 11-->
+<!--		0 -->	00,00,00,11,11,11,11,11,11,11,11,00,
+<!--		1	-->	00,11,00,11,00,00,00,00,00,00,11,00,
+<!--		2	-->	00,11,00,11,00,11,11,11,00,00,11,00,
+<!--		3	-->	00,11,00,11,00,11,00,11,00,00,11,00,
+<!--		4	-->	00,11,00,11,00,11,00,11,11,00,11,00,
+<!--		5	-->	00,11,11,11,00,11,00,00,00,00,11,00,
+<!--		6	-->	00,00,00,00,00,11,11,11,11,11,11,00
+			</map>
+
+			<collectibles>
+				<!-- 0 Apple, 1 Water, 2 Scroll, 3 Bread, 4 Corn, 5 Cheese -->
+				<item>
+					<pos>7,2,9</pos> <!-- x,y, angle repect to north (7 9 3 1) -->
+					<type>5</type>
+				</item>
+				<item>
+					<pos>5,4,1</pos> <!-- x,y, angle repect to north (7 9 3 1) -->
+					<type>3</type>
+				</item>
+				<item>
+					<pos>8,4,3</pos> <!-- x,y, angle repect to north (7 9 3 1) -->
+					<type>1</type>
+				</item>
+				<item>
+					<pos>10,6,1</pos> <!-- x,y, angle repect to north (7 9 3 1) -->
+					<type>0</type>
+				</item>
+			</collectibles>
+
+
+			<wallOrnament>
+				<!-- 0 manacles, 1 switch door, 2 mirror, 3 hook , 4 LazyHall (writing), 5 LazyAltar (writing), 6 Altar, 7 Fence, 8 Ring, 9 Grate, 10 TorchFull, 11 TorchEmpty ,12 scroll on altar, 13 End Demo (writing)-->
+				<item>
+					<pos>9,4,4</pos> <!-- x,y facing -->
+					<type>13</type>
+				</item>
+				<item>
+					<pos>1,6,8</pos> <!-- x,y facing -->
+					<type>11</type>
+				</item>
+				<item>
+					<pos>1,6,8</pos> <!-- x,y facing -->
+					<type>10</type>
+				</item>
+				<item>
+					<pos>2,0,6</pos> <!-- x,y facing -->
+					<type>8</type>
+				</item>
+
+				<item>
+					<pos>11,1,4</pos> <!-- x,y facing -->
+					<type>9</type>
+				</item>
+				<item>
+					<pos>11,3,4</pos> <!-- x,y facing -->
+					<type>9</type>
+				</item>
+				<item>
+					<pos>11,5,4</pos> <!-- x,y facing -->
+					<type>9</type>
+				</item>
+
+				<item>
+					<pos>9,2,6</pos> <!-- x,y facing -->
+					<type>9</type>
+				</item>
+				<item>
+					<pos>9,4,6</pos> <!-- x,y facing -->
+					<type>9</type>
+				</item>
+
+
+
+
+				<item>
+					<pos>4,5,4</pos> <!-- x,y facing -->
+					<type>3</type>
+				</item>
+
+				<item>
+					<pos>4,4,4</pos> <!-- x,y facing -->
+					<type>7</type>
+				</item>
+
+				<item>
+					<pos>4,1,8</pos> <!-- x,y facing -->
+					<type>9</type>
+				</item>
+				<item>
+					<pos>6,1,8</pos> <!-- x,y facing -->
+					<type>9</type>
+				</item>
+				<item>
+					<pos>8,1,8</pos> <!-- x,y facing -->
+					<type>9</type>
+				</item>
+
+				<item>
+					<pos>11,0,4</pos> <!-- x,y facing -->
+					<type>11</type>
+				</item>
+				<item>
+					<pos>11,0,4</pos> <!-- x,y facing -->
+					<type>10</type>
+				</item>
+
+				<item>
+					<pos>7,5,8</pos> <!-- x,y facing -->
+					<type>11</type>
+				</item>
+				<item>
+					<pos>7,5,8</pos> <!-- x,y facing -->
+					<type>10</type>
+				</item>
+
+
+			</wallOrnament>
+			<floorOrnament>
+				<!-- 0 moss, 1 water, 2 pressure plate -->
+				<item>
+					<pos>1,3</pos>
+					<type>2</type>
+				</item>
+				<item>
+					<pos>3,4</pos>
+					<type>0</type>
+				</item>
+				<item>
+					<pos>10,0</pos>
+					<type>0</type>
+				</item>
+				<item>
+					<pos>7,2</pos>
+					<type>0</type>
+				</item>
+			</floorOrnament>
+			<stair>
+				<!-- 0 down, 1 up -->
+				<item>
+					<pos>1,1,2,2</pos> <!-- x,y,facing, facing when exiting -->
+					<type>1</type>
+				</item>
+			</stair>
+			<script>
+				<item>
+					<pos>1,1</pos>
+					<type>5</type>
+					<params>2,0,3,15,6</params> <!-- exclude script when facing, new level, posx, posy, facing -->
+				</item>
+				<item>
+					<pos>8,4</pos>
+					<type>6</type>
+					<params>9,4,6</params> <!-- cell with door x,y, facing -->
+				</item>
+				<item>
+					<pos>1,5</pos>
+					<type>3</type>
+					<params>1,6,8</params> <!-- cell with torch-->
+				</item>
+				<item>
+					<pos>10,0</pos>
+					<type>3</type>
+					<params>11,0,4</params> <!-- cell with torch-->
+				</item>
+				<item>
+					<pos>7,4</pos>
+					<type>3</type>
+					<params>7,5,8</params> <!-- cell with torch-->
+				</item>
+
+			</script>
+			<door>
+				<item>
+					<pos>1,2,2,false</pos> <!-- x,y facing, opened -->
+					<type>1</type>
+				</item>
+			</door>
+		</level>
+	</levels>
+	<additionalDatas>
+		<item>
+			<id>0</id>
+			<name>Elija</name>
+			<title>Lion Of Yaitopya</title>
+			<gender>m</gender>
+			<hea>60</hea>
+			<sta>58</sta>
+			<man>22</man>
+			<luc>50</luc>
+			<str>42</str>
+			<dex>40</dex>
+			<wis>42</wis>
+			<vit>36</vit>
+			<ama>53</ama>
+			<afi>40</afi>
+			<loa>44</loa>
+		</item>
+		<item>
+			<id>1</id>
+			<name>Halk</name>
+			<title>The Barbarian</title>
+			<gender>m</gender>
+			<hea>90</hea>
+			<sta>75</sta>
+			<man>0</man>
+			<luc>40</luc>
+			<str>55</str>
+			<dex>43</dex>
+			<wis>30</wis>
+			<vit>46</vit>
+			<ama>38</ama>
+			<afi>48</afi>
+			<loa>54</loa>
+		</item>
+		<item>
+			<id>2</id>
+			<name>Syra</name>
+			<title>Child Of Nature</title>
+			<gender>f</gender>
+			<hea>53</hea>
+			<sta>72</sta>
+			<man>15</man>
+			<luc>55</luc>
+			<str>38</str>
+			<dex>35</dex>
+			<wis>43</wis>
+			<vit>45</vit>
+			<ama>42</ama>
+			<afi>40</afi>
+			<loa>41</loa>
+		</item>
+		<item>
+			<id>3</id>
+			<name>Hissssa</name>
+			<title>Lizar Of Makan</title>
+			<gender>m</gender>
+			<hea>80</hea>
+			<sta>61</sta>
+			<man>5</man>
+			<luc>40</luc>
+			<str>58</str>
+			<dex>48</dex>
+			<wis>35</wis>
+			<vit>35</vit>
+			<ama>43</ama>
+			<afi>55</afi>
+			<loa>57</loa>
+		</item>
+		<item>
+			<id>4</id>
+			<name>Zed</name>
+			<title>Duke Of Banville</title>
+			<gender>m</gender>
+			<hea>60</hea>
+			<sta>60</sta>
+			<man>10</man>
+			<luc>58</luc>
+			<str>40</str>
+			<dex>40</dex>
+			<wis>40</wis>
+			<vit>50</vit>
+			<ama>40</ama>
+			<afi>40</afi>
+			<loa>42</loa>
+		</item>
+		<item>
+			<id>5</id>
+			<name>Chani</name>
+			<title>Sayyadina Sihaya</title>
+			<gender>f</gender>
+			<hea>47</hea>
+			<sta>67</sta>
+			<man>17</man>
+			<luc>57</luc>
+			<str>37</str>
+			<dex>47</dex>
+			<wis>57</wis>
+			<vit>37</vit>
+			<ama>47</ama>
+			<afi>37</afi>
+			<loa>40</loa>
+		</item>
+		<item>
+			<id>6</id>
+			<name>Hawk</name>
+			<title>The Fearless</title>
+			<gender>m</gender>
+			<hea>70</hea>
+			<sta>85</sta>
+			<man>10</man>
+			<luc>40</luc>
+			<str>45</str>
+			<dex>35</dex>
+			<wis>38</wis>
+			<vit>55</vit>
+			<ama>35</ama>
+			<afi>35</afi>
+			<loa>46</loa>
+		</item>
+		<item>
+			<id>7</id>
+			<name>Boris</name>
+			<title>Wizard Of Baldor</title>
+			<gender>m</gender>
+			<hea>35</hea>
+			<sta>65</sta>
+			<man>28</man>
+			<luc>25</luc>
+			<str>35</str>
+			<dex>45</dex>
+			<wis>55</wis>
+			<vit>40</vit>
+			<ama>45</ama>
+			<afi>40</afi>
+			<loa>38</loa>
+		</item>
+		<item>
+			<id>8</id>
+			<name>Mophus</name>
+			<title>The Healer</title>
+			<gender>m</gender>
+			<hea>55</hea>
+			<sta>55</sta>
+			<man>19</man>
+			<luc>40</luc>
+			<str>42</str>
+			<dex>35</dex>
+			<wis>40</wis>
+			<vit>48</vit>
+			<ama>40</ama>
+			<afi>45</afi>
+			<loa>44</loa>
+		</item>
+		<item>
+			<id>9</id>
+			<name>Leif</name>
+			<title>The Valiant</title>
+			<gender>m</gender>
+			<hea>75</hea>
+			<sta>70</sta>
+			<man>7</man>
+			<luc>35</luc>
+			<str>46</str>
+			<dex>40</dex>
+			<wis>39</wis>
+			<vit>50</vit>
+			<ama>45</ama>
+			<afi>45</afi>
+			<loa>47</loa>
+		</item>
+		<item>
+			<id>10</id>
+			<name>Wu Tse</name>
+			<title>Son Of Heaven</title>
+			<gender>f</gender>
+			<hea>45</hea>
+			<sta>47</sta>
+			<man>20</man>
+			<luc>40</luc>
+			<str>38</str>
+			<dex>35</dex>
+			<wis>53</wis>
+			<vit>45</vit>
+			<ama>47</ama>
+			<afi>40</afi>
+			<loa>41</loa>
+		</item>
+		<item>
+			<id>11</id>
+			<name>Alex</name>
+			<title>Ander</title>
+			<gender>m</gender>
+			<hea>50</hea>
+			<sta>57</sta>
+			<man>13</man>
+			<luc>47</luc>
+			<str>44</str>
+			<dex>55</dex>
+			<wis>45</wis>
+			<vit>40</vit>
+			<ama>35</ama>
+			<afi>40</afi>
+			<loa>46</loa>
+		</item>
+		<item>
+			<id>12</id>
+			<name>Linflas</name>
+			<title></title>
+			<gender>m</gender>
+			<hea>65</hea>
+			<sta>50</sta>
+			<man>12</man>
+			<luc>45</luc>
+			<str>45</str>
+			<dex>45</dex>
+			<wis>47</wis>
+			<vit>35</vit>
+			<ama>50</ama>
+			<afi>35</afi>
+			<loa>46</loa>
+		</item>
+		<item>
+			<id>13</id>
+			<name>Azizi</name>
+			<title>Johari</title>
+			<gender>f</gender>
+			<hea>61</hea>
+			<sta>77</sta>
+			<man>7</man>
+			<luc>47</luc>
+			<str>47</str>
+			<dex>48</dex>
+			<wis>42</wis>
+			<vit>45</vit>
+			<ama>30</ama>
+			<afi>35</afi>
+			<loa>48</loa>
+		</item>
+		<item>
+			<id>14</id>
+			<name>Iaido</name>
+			<title>Ruyto Chiburi</title>
+			<gender>m</gender>
+			<hea>48</hea>
+			<sta>65</sta>
+			<man>11</man>
+			<luc>40</luc>
+			<str>43</str>
+			<dex>55</dex>
+			<wis>40</wis>
+			<vit>35</vit>
+			<ama>45</ama>
+			<afi>50</afi>
+			<loa>45</loa>
+		</item>
+		<item>
+			<id>15</id>
+			<name>Gando</name>
+			<title>Thurfoot</title>
+			<gender>m</gender>
+			<hea>39</hea>
+			<sta>63</sta>
+			<man>26</man>
+			<luc>50</luc>
+			<str>39</str>
+			<dex>45</dex>
+			<wis>47</wis>
+			<vit>33</vit>
+			<ama>48</ama>
+			<afi>43</afi>
+			<loa>42</loa>
+		</item>
+		<item>
+			<id>16</id>
+			<name>Stamm</name>
+			<title>Bladecaster</title>
+			<gender>m</gender>
+			<hea>75</hea>
+			<sta>80</sta>
+			<man>0</man>
+			<luc>35</luc>
+			<str>52</str>
+			<dex>43</dex>
+			<wis>35</wis>
+			<vit>50</vit>
+			<ama>35</ama>
+			<afi>55</afi>
+			<loa>52</loa>
+		</item>
+		<item>
+			<id>17</id>
+			<name>Leyla</name>
+			<title>Shadowseek</title>
+			<gender>f</gender>
+			<hea>48</hea>
+			<sta>60</sta>
+			<man>3</man>
+			<luc>50</luc>
+			<str>40</str>
+			<dex>53</dex>
+			<wis>45</wis>
+			<vit>47</vit>
+			<ama>45</ama>
+			<afi>35</afi>
+			<loa>42</loa>
+		</item>
+		<item>
+			<id>18</id>
+			<name>Tiggy</name>
+			<title>Tamal</title>
+			<gender>f</gender>
+			<hea>25</hea>
+			<sta>45</sta>
+			<man>35</man>
+			<luc>45</luc>
+			<str>30</str>
+			<dex>45</dex>
+			<wis>50</wis>
+			<vit>35</vit>
+			<ama>59</ama>
+			<afi>40</afi>
+			<loa>34</loa>
+		</item>
+		<item>
+			<id>19</id>
+			<name>Sonja</name>
+			<title>She Devil</title>
+			<gender>f</gender>
+			<hea>65</hea>
+			<sta>70</sta>
+			<man>2</man>
+			<luc>40</luc>
+			<str>54</str>
+			<dex>45</dex>
+			<wis>39</wis>
+			<vit>49</vit>
+			<ama>40</ama>
+			<afi>40</afi>
+			<loa>54</loa>
+		</item>
+		<item>
+			<id>20</id>
+			<name>Nabi</name>
+			<title>The Prophet</title>
+			<gender>m</gender>
+			<hea>55</hea>
+			<sta>65</sta>
+			<man>13</man>
+			<luc>40</luc>
+			<str>41</str>
+			<dex>36</dex>
+			<wis>45</wis>
+			<vit>45</vit>
+			<ama>55</ama>
+			<afi>55</afi>
+			<loa>43</loa>
+		</item>
+		<item>
+			<id>21</id>
+			<name>Gothmog</name>
+			<title></title>
+			<gender>m</gender>
+			<hea>60</hea>
+			<sta>55</sta>
+			<man>18</man>
+			<luc>30</luc>
+			<str>40</str>
+			<dex>35</dex>
+			<wis>48</wis>
+			<vit>34</vit>
+			<ama>50</ama>
+			<afi>59</afi>
+			<loa>42</loa>
+		</item>
+		<item>
+			<id>22</id>
+			<name>Wuuf</name>
+			<title>The Bika</title>
+			<gender>f</gender>
+			<hea>40</hea>
+			<sta>50</sta>
+			<man>30</man>
+			<luc>60</luc>
+			<str>33</str>
+			<dex>57</dex>
+			<wis>45</wis>
+			<vit>40</vit>
+			<ama>35</ama>
+			<afi>40</afi>
+			<loa>37</loa>
+		</item>
+		<item>
+			<id>23</id>
+			<name>Daroou</name>
+			<title></title>
+			<gender>m</gender>
+			<hea>100</hea>
+			<sta>65</sta>
+			<man>6</man>
+			<luc>35</luc>
+			<str>50</str>
+			<dex>30</dex>
+			<wis>35</wis>
+			<vit>45</vit>
+			<ama>30</ama>
+			<afi>45</afi>
+			<loa>50</loa>
+		</item>
+	</additionalDatas>
+
+	<spells>
+		<spell>
+			<code>1</code>
+			<real>Vi</real>
+			<fake>raan mir tah</fake>
+		</spell>
+		<spell>
+			<code>0</code>
+			<real>Ya</real>
+			<fake>lass yah nir</fake>
+		</spell>
+		<spell>
+			<code>544</code>
+			<real>Zo Bro Ra</real>
+			<fake>feim zii gron</fake>
+		</spell>
+		<spell>
+			<code>340</code>
+			<real>Ful Bro Ku</real>
+			<fake>od ah viing</fake>
+		</spell>
+		<spell>
+			<code>241</code>
+			<real>Oh Bro Ros</real>
+			<fake>hun kaal zoor</fake>
+		</spell>
+		<spell>
+			<code>042</code>
+			<real>Ya Bro Dain</real>
+			<fake>lok vah koor</fake>
+		</spell>
+		<spell>
+			<code>043</code>
+			<real>Ya Bro Neta</real>
+			<fake>fiik lo sah</fake>
+		</spell>
+		<spell>
+			<code>14</code>
+			<real>Vi Bro</real>
+			<fake>zun hall viik</fake>
+		</spell>
+		<spell>
+			<code>04</code>
+			<real>Ya Bro</real>
+			<fake>faas ru maar</fake>
+		</spell>
+		<spell>
+			<code>343</code>
+			<real>Ful	Bro Neta</real>
+			<fake>joor zah frul</fake>
+		</spell>
+		<spell>
+			<code>03</code>
+			<real>Ya Ir</real>
+			<fake>su grah dun</fake>
+		</spell>
+		<spell>
+			<code>435</code>
+			<real>Des Ir Sar</real>
+			<fake>yol toor shul</fake>
+		</spell>
+		<spell>
+			<code>250</code>
+			<real>Oh Gor Ku</real>
+			<fake>fo krah diin</fake>
+		</spell>
+		<spell>
+			<code>251</code>
+			<real>Oh Gor Ros</real>
+			<fake>iiss slen nus</fake>
+		</spell>
+		<spell>
+			<code>252</code>
+			<real>Oh Gor Dain</real>
+			<fake>kaan drem ov</fake>
+		</spell>
+		<spell>
+			<code>533</code>
+			<real>Zo Ir Neta</real>
+			<fake>krii lun aus</fake>
+		</spell>
+		<spell>
+			<code>3</code>
+			<real>Ful</real>
+			<fake>tiid klo ul</fake>
+		</spell>
+		<spell>
+			<code>234</code>
+			<real>Oh Ir Ra</real>
+			<fake>strun bah qo</fake>
+		</spell>
+		<spell>
+			<code>5</code>
+			<real>Zo</real>
+			<fake>zul mey gut</fake>
+		</spell>
+		<spell>
+			<code>041</code>
+			<real>Ya Bro Ros</real>
+			<fake>fus ro dah</fake>
+		</spell>
+		<spell>
+			<code>214</code>
+			<real>Oh Ew Ra</real>
+			<fake>wuld nah kest</fake>
+		</spell>
+		<spell>
+			<code>215</code>
+			<real>Oh Ew Sar</real>
+			<fake>raan mir tah</fake>
+		</spell>
+		<spell>
+			<code>50</code>
+			<real>Zo Ven</real>
+			<fake>wuld nah kest</fake>
+		</spell>
+		<spell>
+			<code>40</code>
+			<real>Des Ven</real>
+			<fake>lok vah koor</fake>
+		</spell>
+		<spell>
+			<code>20</code>
+			<real>Oh Ven</real>
+			<fake>fiik lo sah</fake>
+		</spell>
+		<spell>
+			<code>41</code>
+			<real>Des Ew</real>
+			<fake>zun hall viik</fake>
+		</spell>
+		<spell>
+			<code>33</code>
+			<real>Ful Ir</real>
+			<fake>iiss slen nus</fake>
+		</spell>
+		<spell>
+			<code>224</code>
+			<real>Oh Kath Ra</real>
+			<fake>strun bah qo</fake>
+		</spell>
+		<spell>
+			<code>524</code>
+			<real>Zo Kath Ra</real>
+			<fake>fus ro dah</fake>
+		</spell>
+	</spells>
+
+	<titles>
+		<title>The LLamah</title>
+		<title>The Noob</title>
+		<title>Fus Ro Dah</title>
+		<title>Lion Of Antani</title>
+		<title>The Barbarian</title>
+		<title>Child Of Nature</title>
+		<title>The Fearless</title>
+		<title>The Healer</title>
+		<title>The Valiant</title>
+		<title>Son Of Heaven</title>
+		<title>Bladecaster</title>
+		<title>Shadowseek</title>
+		<title>She Devil</title>
+		<title>The Prophet</title>
+		<title>The Bikers</title>
+		<title>The Conjurer</title>
+		<title>Skywalker</title>
+		<title>of Isengard</title>
+		<title>of Tatooine</title>
+		<title>The geek</title>
+		<title>The nerd</title>
+		<title>The fat hobbit</title>
+		<title>The fighter</title>
+		<title>the Agent</title>
+		<title>the Bard</title>
+		<title>the Crusader</title>
+		<title>the Knight</title>
+		<title>the Monk</title>
+		<title>the Pilgrim</title>
+		<title>the Rogue</title>
+		<title>the Scout</title>
+		<title>the Sorcerer</title>
+		<title>the Thief</title>
+		<title>the Warrior</title>
+		<title>the Wizard</title>
+		<title>the Avatar</title>
+		<title>of Trinsic</title>
+		<title>of Skara Brae</title>
+		<title>the gargoyle</title>
+		<title>the wingless gargoyle</title>
+		<title>the guardian</title>
+		<title>the honest</title>
+		<title>the compassionate</title>
+		<title>the valorous</title>
+		<title>the honorable</title>
+		<title>the humble</title>
+		<title>the druid</title>
+		<title>the paladin</title>
+		<title>the sheperd</title>
+		<title>the dairy farmer</title>
+		<title>the pirate</title>
+		<title>Threepwood</title>
+		<title>Blinky</title>
+		<title>Kenobi</title>
+		<title>Padawan</title>
+		<title>Pitfall</title>
+		<title>Croft</title>
+		<title>the Hedgehog</title>
+	</titles>
+</root>

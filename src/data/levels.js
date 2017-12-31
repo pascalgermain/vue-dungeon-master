@@ -3,6 +3,8 @@ export default [
     id: 0,
     position: {x: 1, y: 3},
     rotation: 2,
+    // position: {x: 10, y: 4},
+    // rotation: 3,
     cells: [ // 0 wall, 1 empty
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
